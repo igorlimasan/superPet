@@ -24,3 +24,10 @@ button:hover{cursor: pointer;}
     width: 100%;
     opacity: 0.2;
 }
+.flexContainer {
+    display: flex;
+}
+
+.inputField {
+    flex: 1;
+}

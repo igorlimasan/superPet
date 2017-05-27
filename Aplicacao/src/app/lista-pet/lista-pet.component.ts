@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-lista-pet',
-  templateUrl: './lista-pet.component.html',
-  styleUrls: ['./lista-pet.component.css']
+  templateUrl: './lista-pet.component.html'
 })
 export class ListaPetComponent implements OnInit {
 
