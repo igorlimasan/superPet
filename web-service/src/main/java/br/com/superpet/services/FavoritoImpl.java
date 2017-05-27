@@ -15,20 +15,17 @@ public class FavoritoImpl implements FavoritoService {
 	private FavoritoRepository favoritoRep;
 	@Override
 	public Favorito buscar(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return favoritoRep.find(id);
 	}
 
 	@Override
 	public List<Favorito> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+		return favoritoRep.findAll();
 	}
 
 	@Override
-	public Favorito salvar(Favorito idade) {
-		// TODO Auto-generated method stub
-		return null;
+	public Favorito salvar(Favorito favorito) {
+		return favoritoRep.save(favorito);
 	}
 
 }

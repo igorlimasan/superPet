@@ -15,20 +15,17 @@ public class IdadeImpl implements IdadeService {
 	private IdadeRepository idadeRep;
 	@Override
 	public Idade buscar(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return idadeRep.find(id);
 	}
 
 	@Override
 	public List<Idade> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+		return idadeRep.findAll();
 	}
 
 	@Override
 	public Idade salvar(Idade idade) {
-		// TODO Auto-generated method stub
-		return null;
+		return idadeRep.save(idade);
 	}
 
 }

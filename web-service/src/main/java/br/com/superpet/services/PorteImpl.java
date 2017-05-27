@@ -16,20 +16,17 @@ public class PorteImpl implements PorteService {
 	private PorteRepository porteRep;
 	@Override
 	public Porte buscar(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return porteRep.find(id);
 	}
 
 	@Override
 	public List<Porte> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+		return porteRep.findAll();
 	}
 
 	@Override
-	public Idade salvar(Porte idade) {
-		// TODO Auto-generated method stub
-		return null;
+	public Idade salvar(Porte porte) {
+		return porteRep.save(porte);
 	}
 
 	

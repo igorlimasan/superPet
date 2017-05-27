@@ -16,20 +16,17 @@ public class SexoImpl implements SexoService {
 	
 	@Override
 	public Sexo buscar(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return sexoRep.find(id);
 	}
 
 	@Override
 	public List<Sexo> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+		return sexoRep.findAll();
 	}
 
 	@Override
-	public Sexo salvar(Sexo idade) {
-		// TODO Auto-generated method stub
-		return null;
+	public Sexo salvar(Sexo sexo) {
+		return sexoRep.save(sexo);
 	}
 
 }

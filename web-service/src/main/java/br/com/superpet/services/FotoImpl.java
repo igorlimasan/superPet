@@ -15,20 +15,17 @@ public class FotoImpl implements FotoService {
 	private FotoRepository fotoRep;
 	@Override
 	public Foto buscar(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return fotoRep.find(id);
 	}
 
 	@Override
 	public List<Foto> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+		return fotoRep.findAll();
 	}
 
 	@Override
-	public Foto salvar(Foto idade) {
-		// TODO Auto-generated method stub
-		return null;
+	public Foto salvar(Foto foto) {
+		return fotoRep.save(foto);
 	}
 
 	

@@ -16,20 +16,17 @@ public class TipoImpl implements TipoService {
 	private TipoRepository tipoRep;
 	@Override
 	public Tipo buscar(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return tipoRep.find(id);
 	}
 
 	@Override
 	public List<Tipo> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+		return tipoRep.findAll();
 	}
 
 	@Override
-	public Idade salvar(Tipo idade) {
-		// TODO Auto-generated method stub
-		return null;
+	public Idade salvar(Tipo tipo) {
+		return tipoRep.save(tipo);
 	}
 
 }

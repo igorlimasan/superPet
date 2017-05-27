@@ -15,20 +15,17 @@ public class UsuarioImpl implements UsuarioService {
 	private UsuarioRepository usuarioRep;
 	@Override
 	public Usuario buscar(String login, String senha) {
-		// TODO Auto-generated method stub
-		return null;
+		return usuarioRep.logar(login, senha);
 	}
 
 	@Override
 	public List<Usuario> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+		return usuarioRep.findAll();
 	}
 
 	@Override
 	public Usuario salvar(Usuario usuario) {
-		// TODO Auto-generated method stub
-		return null;
+		return usuarioRep.save(usuario);
 	}
 	
 }

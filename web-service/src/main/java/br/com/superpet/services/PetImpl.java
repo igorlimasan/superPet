@@ -16,20 +16,17 @@ public class PetImpl implements PetService{
 	
 	@Override
 	public Pet buscar(long Id) {
-		// TODO Auto-generated method stub
-		return null;
+		return petRep.find(id);
 	}
 
 	@Override
 	public List<Pet> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+		return petRep.findAll();
 	}
 
 	@Override
 	public Pet salvar(Pet pet) {
-		// TODO Auto-generated method stub
-		return null;
+		return petRep.save(pet);
 	}
 
 	@Override

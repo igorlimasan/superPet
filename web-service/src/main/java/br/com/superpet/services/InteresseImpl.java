@@ -15,20 +15,17 @@ public class InteresseImpl implements InteresseService{
 	private InteresseRepository interesseRep;
 	@Override
 	public Interesse buscar(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return interesseRep.find(id);
 	}
 
 	@Override
 	public List<Interesse> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+		return interesseRep.findAll();
 	}
 
 	@Override
-	public Interesse salvar(Interesse idade) {
-		// TODO Auto-generated method stub
-		return null;
+	public Interesse salvar(Interesse interesse) {
+		return interesseRep.save(interesse);
 	}
 
 }

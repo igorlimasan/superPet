@@ -15,20 +15,17 @@ public class AdocaoImpl implements AdocaoService {
 	private AdocaoRepository adocaoRep;
 	@Override
 	public Adocao buscar(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return adocaoRep.find(id);
 	}
 
 	@Override
 	public List<Adocao> buscarTodos() {
-		// TODO Auto-generated method stub
-		return null;
+		return adocaoRep.findAll();
 	}
 
 	@Override
-	public Adocao salvar(Adocao idade) {
-		// TODO Auto-generated method stub
-		return null;
+	public Adocao salvar(Adocao adocao) {
+		return adocaoRep.save(idade);
 	}
 	
 }
