@@ -1,5 +1,5 @@
 .yellow-back{
-   @include linear-gradient(left top, $laranja, $amarelo);
+   @include linear-gradient(left top, $rosa, $laranja);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28d00', endColorstr='#f2ca29', GradientType=1 );
     height: 600px;
 }

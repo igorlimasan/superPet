@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-filtro',
-  templateUrl: './filtro.component.html',
-  styleUrls: ['./filtro.component.css']
+  templateUrl: './filtro.component.html'
 })
 export class FiltroComponent implements OnInit {
 

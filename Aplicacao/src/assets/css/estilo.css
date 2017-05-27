@@ -25,16 +25,22 @@ button:hover {
   width: 100%;
   opacity: 0.2; }
 
+.flexContainer {
+  display: flex; }
+
+.inputField {
+  flex: 1; }
+
 .yellow-back {
-  background: #fa8c00;
+  background: #fc6180;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #fa8c00, #ffb64d);
+  background: -webkit-linear-gradient(left top, #fc6180, #fca72b);
   /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left top, #fa8c00, #ffb64d);
+  background: -o-linear-gradient(left top, #fc6180, #fca72b);
   /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left top, #fa8c00, #ffb64d);
+  background: -moz-linear-gradient(left top, #fc6180, #fca72b);
   /* For Firefox 3.6 to 15 */
-  background: linear-gradient(left top, #fa8c00, #ffb64d);
+  background: linear-gradient(left top, #fc6180, #fca72b);
   /* Standard syntax */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28d00', endColorstr='#f2ca29', GradientType=1 );
   height: 600px; }
