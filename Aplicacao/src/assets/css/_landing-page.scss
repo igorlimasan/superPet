@@ -1,19 +1,8 @@
 .yellow-back{
-    background: rgba(242,141,0,1);
-    background: -moz-linear-gradient(left, rgba(242,141,0,1) 0%, rgba(242,202,41,1) 100%);
-    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,141,0,1)), color-stop(100%, rgba(242,202,41,1)));
-    background: -webkit-linear-gradient(left, rgba(242,141,0,1) 0%, rgba(242,202,41,1) 100%);
-    background: -o-linear-gradient(left, rgba(242,141,0,1) 0%, rgba(242,202,41,1) 100%);
-    background: -ms-linear-gradient(left, rgba(242,141,0,1) 0%, rgba(242,202,41,1) 100%);
-    background: linear-gradient(to right, rgba(242,141,0,1) 0%, rgba(242,202,41,1) 100%);
+   @include linear-gradient(left top, $laranja, $amarelo);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28d00', endColorstr='#f2ca29', GradientType=1 );
     height: 600px;
-    
-    // EXEMPLO USO MIXIN (incluir dentro da classe)
-    // @include linear-gradient(left top, right top, $amarelo, $laranja)
 }
-
-
 
 header{
     background-color: transparent;

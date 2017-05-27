@@ -26,13 +26,16 @@ button:hover {
   opacity: 0.2; }
 
 .yellow-back {
-  background: #f28d00;
-  background: -moz-linear-gradient(left, #f28d00 0%, #f2ca29 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, #f28d00), color-stop(100%, #f2ca29));
-  background: -webkit-linear-gradient(left, #f28d00 0%, #f2ca29 100%);
-  background: -o-linear-gradient(left, #f28d00 0%, #f2ca29 100%);
-  background: -ms-linear-gradient(left, #f28d00 0%, #f2ca29 100%);
-  background: linear-gradient(to right, #f28d00 0%, #f2ca29 100%);
+  background: #fa8c00;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #fa8c00, #ffb64d);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left top, #fa8c00, #ffb64d);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left top, #fa8c00, #ffb64d);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(left top, #fa8c00, #ffb64d);
+  /* Standard syntax */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28d00', endColorstr='#f2ca29', GradientType=1 );
   height: 600px; }
 
