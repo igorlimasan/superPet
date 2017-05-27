@@ -11,7 +11,11 @@ import { DetalhePetComponent } from './detalhe-pet/detalhe-pet.component';
 import { CadastroPetComponent } from './cadastro-pet/cadastro-pet.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { LoginComponent } from './login/login.component';
+<<<<<<< Updated upstream
 import { LandingPageComponent } from './landing-page/landing-page.component';
+=======
+import { AlertaComponent } from './alerta/alerta.component';
+>>>>>>> Stashed changes
 
 @NgModule({
   declarations: [
@@ -23,8 +27,12 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
     CadastroPetComponent,
     CadastroUsuarioComponent,
     LoginComponent,
+<<<<<<< Updated upstream
     //COMPONENTES CRIADOS
     LandingPageComponent    
+=======
+    AlertaComponent
+>>>>>>> Stashed changes
   ],
   imports: [
     BrowserModule,
