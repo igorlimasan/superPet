@@ -1,13 +1,25 @@
 package br.com.superpet.models;
 
+import javax.persistence.Column;
+import javax.persistence.Embeddable;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonView;
 
 import br.com.superpet.views.View;
-
+@Table(name = "interesse")
+@Embeddable
 public class InteresseId {
+	
+	
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
+	private Long id;
+	
 	@JsonView({View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_pet")

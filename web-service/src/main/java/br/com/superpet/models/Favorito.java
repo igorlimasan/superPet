@@ -12,20 +12,11 @@ import javax.persistence.Table;
 @Table(name = "favorito")
 public class Favorito {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private Long id;
-	
 	@EmbeddedId
 	private FavoritoId favoritoId;
 
-	public Long getId() {
-		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
-	}
+	
+	
 
 	public FavoritoId getFavoritoId() {
 		return favoritoId;

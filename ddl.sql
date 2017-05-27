@@ -103,7 +103,7 @@ create table superpet.foto(
     CONSTRAINT pk_foto_id primary key(id)
 );
 
-create table pet_foto(
+create table superpet.pet_foto(
 	fk_pet int,
     fk_foto int,
     CONSTRAINT fk__pet_foto__fk_pet foreign key (fk_pet) references superpet.pet(id),
@@ -122,12 +122,18 @@ create table superpet.interesse(
 
 
 create table superpet.adocao(
+	id int auto_increment,
 	fk_pet int,
     fk_usuario_cuidador int,
     fk_usuario_adotador int,
     data timestamp,
     CONSTRAINT fk__adocao__fk_pet foreign key (fk_pet) references superpet.pet(id),
     CONSTRAINT fk__adocao__fk_usuario_cuidador foreign key (fk_usuario_cuidador) references superpet.usuario(id),
-    CONSTRAINT fk__adocao__fk_usuario_adotador foreign key (fk_usuario_adotador) references superpet.usuario(id)
+    CONSTRAINT fk__adocao__fk_usuario_adotador foreign key (fk_usuario_adotador) references superpet.usuario(id),
+    CONSTRAINT pk__adocao__id primary key (id)
 );
+
+
+
+
 
