@@ -11,6 +11,8 @@ import { DetalhePetComponent } from './detalhe-pet/detalhe-pet.component';
 import { CadastroPetComponent } from './cadastro-pet/cadastro-pet.component';
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { LoginComponent } from './login/login.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
+import { AlertaComponent } from './alerta/alerta.component';
 
 @NgModule({
   declarations: [
@@ -21,8 +23,13 @@ import { LoginComponent } from './login/login.component';
     DetalhePetComponent,
     CadastroPetComponent,
     CadastroUsuarioComponent,
-    LoginComponent
+    LoginComponent,
+
+    //COMPONENTES CRIADOS
+    LandingPageComponent,    
+    AlertaComponent
   ],
+  
   imports: [
     BrowserModule,
     FormsModule,

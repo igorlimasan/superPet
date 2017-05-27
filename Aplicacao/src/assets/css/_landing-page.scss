@@ -1,0 +1,48 @@
+.yellow-back{
+   @include linear-gradient(left top, $laranja, $amarelo);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28d00', endColorstr='#f2ca29', GradientType=1 );
+    height: 600px;
+}
+
+header{
+    background-color: transparent;
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    
+    button{
+        float: right;
+        width: auto;
+        background-color: transparent;
+        padding: 5px;
+        margin-top: 43px;
+        border: 0px;
+        margin-right: 15px;
+        color: white;
+    }
+}
+.logo{
+    margin-left: 30px;
+    margin-top: 17px;
+    position: absolute;
+}
+h1{
+    text-align: center;
+    margin-top: 200px;
+    color: white;
+    font-size: 60px;
+}
+.search-land{
+    height: 45px;
+    border-radius: 8px;
+    padding: 8px;
+    border: 0px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 70%;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
