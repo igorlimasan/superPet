@@ -1,0 +1,2 @@
+//CRIANDO COMPONENT ANGULAR-CLI
+ng g c 'folder' 'nome-do-component'
