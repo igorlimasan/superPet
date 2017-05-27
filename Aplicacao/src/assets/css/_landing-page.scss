@@ -1,0 +1,59 @@
+.yellow-back{
+    background: rgba(242,141,0,1);
+    background: -moz-linear-gradient(left, rgba(242,141,0,1) 0%, rgba(242,202,41,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,141,0,1)), color-stop(100%, rgba(242,202,41,1)));
+    background: -webkit-linear-gradient(left, rgba(242,141,0,1) 0%, rgba(242,202,41,1) 100%);
+    background: -o-linear-gradient(left, rgba(242,141,0,1) 0%, rgba(242,202,41,1) 100%);
+    background: -ms-linear-gradient(left, rgba(242,141,0,1) 0%, rgba(242,202,41,1) 100%);
+    background: linear-gradient(to right, rgba(242,141,0,1) 0%, rgba(242,202,41,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28d00', endColorstr='#f2ca29', GradientType=1 );
+    height: 600px;
+    
+    // EXEMPLO USO MIXIN (incluir dentro da classe)
+    // @include linear-gradient(left top, right top, $amarelo, $laranja)
+}
+
+
+
+header{
+    background-color: transparent;
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    
+    button{
+        float: right;
+        width: auto;
+        background-color: transparent;
+        padding: 5px;
+        margin-top: 43px;
+        border: 0px;
+        margin-right: 15px;
+        color: white;
+    }
+}
+.logo{
+    margin-left: 30px;
+    margin-top: 17px;
+    position: absolute;
+}
+h1{
+    text-align: center;
+    margin-top: 200px;
+    color: white;
+    font-size: 60px;
+}
+.search-land{
+    height: 45px;
+    border-radius: 8px;
+    padding: 8px;
+    border: 0px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 70%;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
