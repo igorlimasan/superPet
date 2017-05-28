@@ -1,5 +1,7 @@
 package br.com.superpet.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Embeddable;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -15,7 +17,7 @@ import br.com.superpet.views.View;
 @Table(name = "favorito")
 
 
-public class FavoritoId {
+public class FavoritoId implements Serializable{
 	@JsonView({View.All.class,View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_pet")

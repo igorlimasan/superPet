@@ -14,8 +14,8 @@ public class UsuarioImpl implements UsuarioService {
 	@Autowired
 	private UsuarioRepository usuarioRep;
 	@Override
-	public Usuario buscar(String login, String senha) {
-		return usuarioRep.logar(login, senha);
+	public Usuario buscar(String login) {
+		return usuarioRep.findByLogin(login);
 	}
 
 	@Override

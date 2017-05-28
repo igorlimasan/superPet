@@ -1,5 +1,7 @@
 package br.com.superpet.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 import javax.persistence.GeneratedValue;
@@ -13,7 +15,7 @@ import com.fasterxml.jackson.annotation.JsonView;
 import br.com.superpet.views.View;
 @Table(name = "interesse")
 @Embeddable
-public class InteresseId {
+public class InteresseId implements Serializable{
 	
 	
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

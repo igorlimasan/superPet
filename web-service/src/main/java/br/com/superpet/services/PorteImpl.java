@@ -16,7 +16,7 @@ public class PorteImpl implements PorteService {
 	private PorteRepository porteRep;
 	@Override
 	public Porte buscar(long id) {
-		return porteRep.find(id);
+		return porteRep.findById(id);
 	}
 
 	@Override
@@ -24,10 +24,7 @@ public class PorteImpl implements PorteService {
 		return porteRep.findAll();
 	}
 
-	@Override
-	public Idade salvar(Porte porte) {
-		return porteRep.save(porte);
-	}
+	
 
 	
 

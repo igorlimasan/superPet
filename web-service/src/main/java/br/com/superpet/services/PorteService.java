@@ -8,5 +8,5 @@ import br.com.superpet.models.Porte;
 public interface PorteService {
 	public Porte buscar(long id);
 	public List<Porte> buscarTodos();
-	public Idade salvar(Porte idade);
+
 }

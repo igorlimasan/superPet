@@ -15,8 +15,8 @@ public class PetImpl implements PetService{
 	private PetRepository petRep;
 	
 	@Override
-	public Pet buscar(long Id) {
-		return petRep.find(id);
+	public Pet buscar(long id) {
+		return petRep.findById(id);
 	}
 
 	@Override
@@ -29,22 +29,6 @@ public class PetImpl implements PetService{
 		return petRep.save(pet);
 	}
 
-	@Override
-	public List<Pet> petsNaoAdotados() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Pet> petByUsuario(long IdUsuario) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<Pet> petByCuidador(long IdCuidador) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 	
 }

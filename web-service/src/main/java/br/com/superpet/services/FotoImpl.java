@@ -15,7 +15,7 @@ public class FotoImpl implements FotoService {
 	private FotoRepository fotoRep;
 	@Override
 	public Foto buscar(long id) {
-		return fotoRep.find(id);
+		return fotoRep.findById(id);
 	}
 
 	@Override

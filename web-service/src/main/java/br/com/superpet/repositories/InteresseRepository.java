@@ -9,7 +9,7 @@ import br.com.superpet.models.Interesse;
 import br.com.superpet.models.InteresseId;
 import br.com.superpet.models.Pet;
 
-public interface InteresseRepository extends CrudRepository<Interesse, Long>{
+public interface InteresseRepository extends CrudRepository<Interesse, InteresseId>{
 	
 	public List<Interesse> findAll();
 	

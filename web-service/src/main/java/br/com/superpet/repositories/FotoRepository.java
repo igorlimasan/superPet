@@ -8,4 +8,5 @@ import br.com.superpet.models.Foto;
 
 public interface FotoRepository extends CrudRepository<Foto, Long>{
 	public List<Foto> findAll();
+	public Foto findById(Long id);
 }

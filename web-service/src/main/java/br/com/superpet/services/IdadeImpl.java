@@ -15,7 +15,7 @@ public class IdadeImpl implements IdadeService {
 	private IdadeRepository idadeRep;
 	@Override
 	public Idade buscar(long id) {
-		return idadeRep.find(id);
+		return idadeRep.findById(id);
 	}
 
 	@Override
