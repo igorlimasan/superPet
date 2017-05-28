@@ -1,21 +1,25 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router, NavigationStart } from '@angular/router';
+
+import { Usuario } from '../model/usuario';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html'
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   url: string;
-  
+  usuario: Usuario = new Usuario();
+
   constructor(private _router: Router) {
       this._router.events
           .subscribe((e: NavigationStart) => {
               this.url = e.url;
       });
-  }
 
-  ngOnInit() {
+      if(sessionStorage.getItem('usuario')) {
+            this.usuario = JSON.parse(sessionStorage.getItem('usuario'));
+        }
   }
 
   urlAtiva(url: string): boolean {

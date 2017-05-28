@@ -1,9 +1,9 @@
 <header class="header-default" *ngIf="!urlAtiva('landingpage')">
     <div class="logo-colorido logo"></div>
     
-    <a type="button" class="left" [routerLink]="['/superpets']">Adotar</a>
-    <a type="button" class="left" [routerLink]="['/meus-pets']">Meus pets</a>
-    <a type="button" class="left" [routerLink]="['/favoritos']">Favoritos</a>
+    <a *ngIf="usuario.id" type="button" class="left" [routerLink]="['/superpets']">Adotar</a>
+    <a *ngIf="usuario.id"type="button" class="left" [routerLink]="['/meus-pets']">Meus pets</a>
+    <!--<a *ngIf="usuario.id"type="button" class="left" [routerLink]="['/favoritos']">Favoritos</a>-->
 
     <a type="button" class="right" [routerLink]="['/login']">Entrar</a>
     <a type="button" class="right last" [routerLink]="['/cadastro-usuario']">Cadastro</a>

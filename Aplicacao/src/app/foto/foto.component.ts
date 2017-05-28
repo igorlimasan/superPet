@@ -19,7 +19,6 @@ export class FotoComponent implements OnInit {
       if(sessionStorage.getItem('usuario')) {
           this.usuario = JSON.parse(sessionStorage.getItem('usuario'));
       }
-
   }
 
   ngOnInit() {
