@@ -64,6 +64,66 @@ button:hover {
   width: 65px;
   height: 59px; }
 
+.pata-cinza {
+  background: url("../images/icones.png") no-repeat 0 -113px;
+  width: 41px;
+  height: 34px; }
+
+.osso-cinza {
+  background: url("../images/icones.png") no-repeat 0 -113px;
+  width: 41px;
+  height: 34px; }
+
+.macho-cinza {
+  background: url("../images/icones.png") no-repeat -64px -169px;
+  width: 34px;
+  height: 34px; }
+
+.femea-cinza {
+  background: url("../images/icones.png") no-repeat -8px -166px;
+  width: 27px;
+  height: 40px; }
+
+.pequeno-cinza {
+  background: url("../images/icones.png") no-repeat -239px -183px;
+  width: 67px;
+  height: 48px; }
+
+.medio-cinza {
+  background: url("../images/icones.png") no-repeat -335px -164px;
+  width: 86px;
+  height: 67px; }
+
+.grande-cinza {
+  background: url("../images/icones.png") no-repeat -443px -148px;
+  width: 97px;
+  height: 83px; }
+
+.pequeno-amarelo {
+  background: url("../images/icones.png") no-repeat -239px -278px;
+  width: 67px;
+  height: 49px; }
+
+.medio-amarelo {
+  background: url("../images/icones.png") no-repeat -335px -259px;
+  width: 86px;
+  height: 68px; }
+
+.grande-amarelo {
+  background: url("../images/icones.png") no-repeat -443px -244px;
+  width: 97px;
+  height: 83px; }
+
+.boneco-cinza {
+  background: url("../images/icones.png") no-repeat -126px -170px;
+  width: 35px;
+  height: 32px; }
+
+.local-cinza {
+  background: url("../images/icones.png") no-repeat -181px -169px;
+  width: 28px;
+  height: 37px; }
+
 .ossos-white {
   background-image: url(../images/bg-osso.png);
   height: 750px;
@@ -86,6 +146,110 @@ button:hover {
 @media (min-width: 1200px) {
   .container {
     width: 1170px; } }
+.the-main {
+  width: calc(25% - 40px);
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 90px;
+  float: left; }
+
+.main {
+  height: 350px;
+  width: 100%;
+  background-color: white;
+  border-bottom: 5px solid #fca72b; }
+  .main img {
+    width: 100%;
+    height: 250px; }
+  .main .nome {
+    margin-left: 10px;
+    font-weight: bold; }
+  .main .caracteristicas {
+    margin-left: 10px;
+    color: #333333; }
+  .main .coracao-cinza {
+    margin-right: 10px; }
+
+.coracao-cinza {
+  width: 34px;
+  background-color: transparent;
+  height: 30px;
+  border: 0px;
+  float: right;
+  margin-top: -10px; }
+  .coracao-cinza:hover i {
+    color: #de0000; }
+
+.list-pet-view {
+  background-color: #f5f5f5;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  padding-bottom: 80px; }
+
+.edit-btn {
+  margin-top: 30px;
+  width: 100%;
+  border: 0px;
+  height: 45px;
+  background-color: #333333;
+  border-radius: 5px;
+  color: white; }
+  .edit-btn:hover {
+    background-color: #fca72b; }
+
+@media (max-width: 1200px) {
+  .main {
+    height: 300px; }
+    .main img {
+      height: 200px; } }
+@media (max-width: 990px) {
+  .the-main {
+    width: 28%; }
+
+  .main {
+    height: 300px; }
+    .main img {
+      height: 200px; } }
+@media (max-width: 767px) {
+  .the-main {
+    width: 44%; }
+
+  .main {
+    height: 400px; }
+    .main img {
+      height: 300px; } }
+@media (max-width: 697px) {
+  .the-main {
+    width: 42%; } }
+@media (max-width: 602px) {
+  .the-main {
+    width: 40%; }
+
+  .main {
+    height: 300px; }
+    .main img {
+      height: 200px; } }
+@media (max-width: 490px) {
+  .the-main {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px; }
+
+  .main {
+    height: 500px; }
+    .main img {
+      height: 400px; } }
+@media (max-width: 420px) {
+  .main {
+    height: 425px; }
+    .main img {
+      height: 325px; } }
+@media (max-width: 350px) {
+  .main {
+    height: 375px; }
+    .main img {
+      height: 275px; } }
 .yellow-back {
   background: #fc6180;
   /* For browsers that do not support gradients */
@@ -361,13 +525,19 @@ h1 {
   .filter input[type="text"] {
     height: 30px;
     width: 100%; }
+  @media (max-width: 654px) {
+    .filter .filter-header {
+      padding-top: 30px; } }
+  @media (max-width: 635px) {
+    .filter {
+      display: none; } }
 
 .search input {
   border: none;
   border-bottom: 1px solid #ededed;
   display: block;
   height: 40px;
-  padding: 10px;
-  width: 100%; }
+  padding: 10px 20px;
+  width: calc(100% - 40px); }
 
 /*# sourceMappingURL=estilo.css.map */
