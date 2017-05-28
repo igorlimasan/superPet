@@ -1,5 +1,5 @@
-<header *ngIf="!urlAtiva('landingpage')">
+<header class="header-default" *ngIf="!urlAtiva('landingpage')">
     <div class="logo-colorido logo"></div>
-    <button type="button">Cadastre-se</button>
-    <button type="button">Login</button>
+    <a type="button" routerLink="cadastro-usuario">Cadastre-se</a>
+    <a type="button" routerLink="login">Login</a>
 </header>

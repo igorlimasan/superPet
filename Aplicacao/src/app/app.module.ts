@@ -17,8 +17,14 @@ import { AlertaComponent } from './alerta/alerta.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
-  { path: '**', component: LandingPageComponent },
-  { path: 'login', component: LoginComponent }
+  { path: 'login', component: LoginComponent },
+  { path: 'cadastro-usuario', component: CadastroUsuarioComponent },
+  { path: 'cadastro-usuario/:id', component: CadastroUsuarioComponent },
+  { path: 'superpets', component: ListaPetComponent },
+  { path: 'cadastro-pet', component: CadastroPetComponent },
+  { path: 'cadastro-pet/:id', component: CadastroPetComponent },
+  { path: 'detalhe-pet/:id', component: DetalhePetComponent },
+  { path: '**', component: LandingPageComponent }
 ];
 
 @NgModule({
