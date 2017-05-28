@@ -12,7 +12,7 @@ export class FotoComponent implements OnInit {
 
   usuario: Usuario = new Usuario();
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
   }

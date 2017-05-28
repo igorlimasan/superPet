@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastroPetModule } from './cadastro-pet/cadastro-pet.module';
 import { DetalhePetModule } from './detalhe-pet/detalhe-pet.module';
 import { CadastroUsuarioModule } from './cadastro-usuario/cadastro-usuario.module';
+import { FotoModule } from './foto/foto.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -17,7 +18,6 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
 import { LoginComponent } from './login/login.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AlertaComponent } from './alerta/alerta.component';
-import { FotoComponent } from './foto/foto.component';
 import { Webservice } from './helpers/webservice';
 
 const appRoutes: Routes = [
@@ -42,8 +42,7 @@ const appRoutes: Routes = [
     ListaPetComponent,
     LoginComponent,
     LandingPageComponent,    
-    AlertaComponent, 
-    FotoComponent
+    AlertaComponent
   ],
   
   imports: [
@@ -54,6 +53,7 @@ const appRoutes: Routes = [
     CadastroPetModule,
     DetalhePetModule,
     CadastroUsuarioModule,
+    FotoModule,
 
     RouterModule.forRoot(appRoutes)
   ],

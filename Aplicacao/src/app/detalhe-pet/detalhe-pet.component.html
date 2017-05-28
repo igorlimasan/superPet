@@ -2,10 +2,11 @@
 	<div class="capa">
 		<div class="container">
 			<div class="nome">
-				<img src="../assets/images/pets/adocao_14.jpg" />
+				<img *ngIf="pet.fotos" src="data:image/jpeg;base64,{{pet.fotos[0].foto}}"/>
+				<img *ngIf="!pet.fotos" src=""/>
 				
 				<i class="fa fa-heart-o fa-3x"></i>
-				<p>Nome do Pet</p>
+				<p>{{ pet.nome }} </p>
 			</div>
 			
 			<button class="btn-galeria" type="button"> Galeria</button>
@@ -17,22 +18,19 @@
 		<div class="container">
 			<div class="descricao-left">
 
-				<div class="pata-cinza"></div><p class="animal">Cachorro</p>
-				<div class="gen-ico macho-cinza"></div><p class="genero">Macho</p>
+				<div class="pata-cinza"></div><p class="animal">{{ pet.tipo.tipo }}</p>
+				<div class="gen-ico {{ pet.sexo.sexo == 'M' ? 'macho-cinza':'femea-cinza' }}" ></div><p class="genero">{{ pet.sexo.sexo }}</p>
 				<h2>Descrição:</h2>
 				<p>
-					no no no no no no no no no no no no no no no no no no no no no no no no no no no 
-					no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no 
-					no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no 
-					no no no no no no no no no no no no no no no no no no no no no no no no no no no no no no
+					{{ pet.descricao }}
 				</p>
 			</div>
 			
 			<div class="descricao-right">
 
-				<div class="pequeno-cinza an1"></div>
-				<div class="medio-cinza an2"></div>
-				<div class="grande-cinza an3"></div>
+				<div class="{{ (pet.porte.porte | lowercase) == 'pequeno' ? 'pequeno-amarelo':'pequeno-cinza' }} an1"></div>
+				<div class="{{ (pet.porte.porte | lowercase) == 'médio' ? 'medio-amarelo':'medio-cinza' }} an2"></div>
+				<div class="{{ (pet.porte.porte | lowercase) == 'grande' ? 'grande-amarelo':'grande-cinza' }} an3"></div>
 
 				<div class="boneco-cinza an4"></div>
 				<p class="an5">Nome do Cuidador</p>

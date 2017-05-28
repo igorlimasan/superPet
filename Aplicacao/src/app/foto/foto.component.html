@@ -1,6 +1,7 @@
 <div class="foto-container">
 	<div class="main">
-		<img src="{{ pet.fotos ? 'data:image/jpeg;base64,pet.fotos[1].foto' : ''}}" [routerLink]="['/detalhe-pet/1']"/>
+		<img *ngIf="pet.fotos" src="data:image/jpeg;base64,{{pet.fotos[0].foto}}" [routerLink]="['/detalhe-pet/', pet.id]"/>
+		<img *ngIf="!pet.fotos" src="" [routerLink]="['/detalhe-pet/', pet.id]"/>
 		<p class="nome"><span [routerLink]="['/detalhe-pet/1']">{{ pet.nome }}</span>
 			<button class="coracao-cinza">
 				<i class="fa fa-heart-o"></i>
@@ -8,5 +9,6 @@
 		</p>      
 		<p class="caracteristicas">{{ pet.sexo.sexo }}, porte {{ pet.porte.porte }}...</p>  
 	</div>
-	<button class="edit-btn" *ngIf="usuario.autorizacoes && usuario.autorizacoes[1].autorizacao" [routerLink]="['/editar-pet/1']">Editar</button>
+	<button class="edit-btn"  [routerLink]="['/editar-pet/', pet.id]">Editar</button>
+	<!--<button class="edit-btn" *ngIf="usuario.autorizacoes && usuario.autorizacoes[1].autorizacao" [routerLink]="['/editar-pet/1']">Editar</button>-->
 </div>

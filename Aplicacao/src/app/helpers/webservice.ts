@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 export class Webservice {
     _http: Http;
     _headers: Headers;
-    _url: string = 'http://localhost:8080/superpet/';
+    _url: string = 'http://192.168.21.231:8080/superpet/';
 
     constructor(http: Http) {
         this._http = http;

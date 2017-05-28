@@ -17,7 +17,7 @@ export class ListaPetComponent implements OnInit {
   constructor(private service: PetService) {
     this.service.listar(this.usuario)
           .subscribe(
-              pets => {this.pets = pets, console.log(this.pets[0].sexo.id)},
+              pets => {this.pets = pets},
               erro => console.log(erro));
   }
 
