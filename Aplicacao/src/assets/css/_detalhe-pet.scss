@@ -106,6 +106,22 @@
         width: 100%;
     }
 }
+.fotos-pet-cadastro {
+    img {
+        margin: 0;
+        padding: 0;
+        width: 30%;
+        margin-right: 4%;
+    }
+    img:last-child {
+        margin-right: 0;
+        float: right;
+    }
+    img:first-child {
+        float: none;
+    }
+
+}
 .animal{
     margin-top: -19px;
     margin-left: 55px;

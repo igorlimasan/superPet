@@ -578,6 +578,17 @@ h1 {
   padding: 15px;
   width: 100%; }
 
+.fotos-pet-cadastro img {
+  margin: 0;
+  padding: 0;
+  width: 30%;
+  margin-right: 4%; }
+.fotos-pet-cadastro img:last-child {
+  margin-right: 0;
+  float: right; }
+.fotos-pet-cadastro img:first-child {
+  float: none; }
+
 .animal {
   margin-top: -19px;
   margin-left: 55px; }
@@ -698,7 +709,7 @@ h1 {
   width: calc(100% - 40px); }
 
 .cad-form {
-  height: 140% !important; }
+  height: 230% !important; }
 
 .cadastro-btn {
   margin-bottom: 40px; }
