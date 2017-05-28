@@ -58,7 +58,37 @@ h1{
     background-color: transparent;
     color: $rosa;
 }
-.center-xs{margin-top: -120px;}
+.petland{
+        margin-top: -570px;
+        @media only screen 
+        and (max-width: 991px){
+           margin-top: -1300px; 
+        }
+        @media only screen 
+        and (max-width: 850px){
+           margin-top: -1250px; 
+        }
+        @media only screen 
+        and (max-width: 767px){
+           margin-top: -1600px; 
+        }
+        @media only screen 
+        and (max-width: 600px){
+           margin-top: -1500px; 
+        }
+        @media only screen 
+        and (max-width: 500px){
+           margin-top: -1400px; 
+        }
+        @media only screen 
+        and (max-width: 400px){
+           margin-top: -1250px; 
+        }
+        @media only screen 
+        and (max-width: 387px){
+           margin-top: -1300px; 
+        }
+}
 
 .pets-landing-page{
     img{
@@ -66,5 +96,65 @@ h1{
         width: 100%;
         z-index: 40;
         position: relative;
+    }
+}
+.photos{
+    div{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+.gray-ground{
+    height: 100%;
+    width: 100%;
+    background-color: $cinza3;
+    padding-bottom: 50px;
+
+    .box{
+        margin-top: 10em;
+        min-height: 100px;
+        border-radius: 5px;
+        background-color: white;
+        height: auto;
+        padding: 10px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @media only screen 
+        and (max-width: 991px){
+           margin-top: 2em; 
+        }
+    }
+
+    .white-blocks{
+        @media only screen 
+        and (max-width: 991px){
+           margin-top: 23em; 
+        }
+        @media only screen 
+        and (max-width: 850px){
+           margin-top: 20em; 
+        }
+        @media only screen 
+        and (max-width: 767px){
+           margin-top: 45em; 
+        }
+        @media only screen 
+        and (max-width: 600px){
+           margin-top: 40em; 
+        }
+        @media only screen 
+        and (max-width: 500px){
+           margin-top: 25em; 
+        }
+        @media only screen 
+        and (max-width: 400px){
+           margin-top: 15em; 
+        }
+        @media only screen 
+        and (max-width: 387px){
+           margin-top: 18em; 
+        }
     }
 }

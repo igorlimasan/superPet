@@ -19,17 +19,17 @@ button:hover {
   height: 63px; }
 
 .pegada-amarela {
-  background: url("imgs/icones.png") no-repeat -568px -86px;
+  background: url("../images/icones.png") no-repeat -568px -86px;
   width: 76px;
   height: 61px; }
 
 .coracao-vermelho {
-  background: url("imgs/icones.png") no-repeat -573px -172px;
+  background: url("../images/icones.png") no-repeat -573px -172px;
   width: 67px;
   height: 59px; }
 
 .user-azul {
-  background: url("imgs/icones.png") no-repeat -573px -1px;
+  background: url("../images/icones.png") no-repeat -573px -1px;
   width: 65px;
   height: 59px; }
 
@@ -123,13 +123,77 @@ h1 {
   background-color: transparent;
   color: #fc6180; }
 
-.center-xs {
-  margin-top: -120px; }
+.petland {
+  margin-top: -570px; }
+  @media only screen and (max-width: 991px) {
+    .petland {
+      margin-top: -1300px; } }
+  @media only screen and (max-width: 850px) {
+    .petland {
+      margin-top: -1250px; } }
+  @media only screen and (max-width: 767px) {
+    .petland {
+      margin-top: -1600px; } }
+  @media only screen and (max-width: 600px) {
+    .petland {
+      margin-top: -1500px; } }
+  @media only screen and (max-width: 500px) {
+    .petland {
+      margin-top: -1400px; } }
+  @media only screen and (max-width: 400px) {
+    .petland {
+      margin-top: -1250px; } }
+  @media only screen and (max-width: 387px) {
+    .petland {
+      margin-top: -1300px; } }
 
 .pets-landing-page img {
   height: 100%;
   width: 100%;
   z-index: 40;
   position: relative; }
+
+.photos div {
+  padding-left: 0px;
+  padding-right: 0px; }
+
+.gray-ground {
+  height: 100%;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-bottom: 50px; }
+  .gray-ground .box {
+    margin-top: 10em;
+    min-height: 100px;
+    border-radius: 5px;
+    background-color: white;
+    height: auto;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px; }
+    @media only screen and (max-width: 991px) {
+      .gray-ground .box {
+        margin-top: 2em; } }
+  @media only screen and (max-width: 991px) {
+    .gray-ground .white-blocks {
+      margin-top: 23em; } }
+  @media only screen and (max-width: 850px) {
+    .gray-ground .white-blocks {
+      margin-top: 20em; } }
+  @media only screen and (max-width: 767px) {
+    .gray-ground .white-blocks {
+      margin-top: 45em; } }
+  @media only screen and (max-width: 600px) {
+    .gray-ground .white-blocks {
+      margin-top: 40em; } }
+  @media only screen and (max-width: 500px) {
+    .gray-ground .white-blocks {
+      margin-top: 25em; } }
+  @media only screen and (max-width: 400px) {
+    .gray-ground .white-blocks {
+      margin-top: 15em; } }
+  @media only screen and (max-width: 387px) {
+    .gray-ground .white-blocks {
+      margin-top: 18em; } }
 
 /*# sourceMappingURL=estilo.css.map */
