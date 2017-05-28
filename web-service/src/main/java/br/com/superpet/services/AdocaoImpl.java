@@ -41,5 +41,11 @@ public class AdocaoImpl implements AdocaoService {
 		// TODO Auto-generated method stub
 		return adocaoRep.findByCuidador(id);
 	}
+
+	@Override
+	public Adocao buscarPorCuidadorPet(Long idCuidador, Long idPet) {
+		// TODO Auto-generated method stub
+		return adocaoRep.findByCuidadorAndPet(idCuidador, idPet);
+	}
 	
 }

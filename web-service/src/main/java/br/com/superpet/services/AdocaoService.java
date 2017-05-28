@@ -10,5 +10,6 @@ public interface AdocaoService {
 	public List<Pet> buscarNaoAdotados();
 	public List<Pet> buscarPorCuidador(Long id);
 	public List<Adocao> buscarTodos();
-	public Adocao salvar(Adocao idade);
+	public Adocao salvar(Adocao adocao);
+	public Adocao buscarPorCuidadorPet(Long idCuidador, Long idPet);
 }
