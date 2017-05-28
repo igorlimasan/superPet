@@ -20,34 +20,15 @@ header{
         margin-right: 15px;
         color: white;
         position: absolute;
-    }
-}
-.cadastre{
-    margin-right: 100px;
         @media only screen 
         and (max-width: 454px){
-            color: transparent;
-            width: 40px;
-            height: 40px;
-            margin-right: 50px;
-            background-image: url('../images/signup.png');
-            background-size: 31px 30px;
-            background-position: 5px;
-            background-repeat: no-repeat;
+            display: none;
         }
     }
-.login{
-    @media only screen 
-    and (max-width: 454px){
-        color: transparent;
-        width: 40px;
-        height: 40px;
-        background-image: url(../images/key.png);
-        background-size: 31px 28px;
-        margin-right: 6px;
-        background-position: 5px;
-        background-repeat: no-repeat;
-    }
+}
+
+.cadastre{
+    margin-right: 80px;
 }
 
 .logo{
@@ -197,3 +178,20 @@ h1{
         }
     }
 }
+
+.nav-res{
+    height: 55px;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(185, 185, 185, 0.19);
+    border: 0px;
+    text-align: center;
+    color: white;
+    display: none;
+    border-bottom: 1px solid white;
+    @media only screen 
+    and (max-width: 454px){
+        display: block;
+    }
+}
+.n-second{margin-top: 55px;}

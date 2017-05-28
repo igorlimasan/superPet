@@ -95,30 +95,12 @@ header {
     margin-right: 15px;
     color: white;
     position: absolute; }
+    @media only screen and (max-width: 454px) {
+      header button {
+        display: none; } }
 
 .cadastre {
-  margin-right: 100px; }
-  @media only screen and (max-width: 454px) {
-    .cadastre {
-      color: transparent;
-      width: 40px;
-      height: 40px;
-      margin-right: 50px;
-      background-image: url("../images/signup.png");
-      background-size: 31px 30px;
-      background-position: 5px;
-      background-repeat: no-repeat; } }
-
-@media only screen and (max-width: 454px) {
-  .login {
-    color: transparent;
-    width: 40px;
-    height: 40px;
-    background-image: url(../images/key.png);
-    background-size: 31px 28px;
-    margin-right: 6px;
-    background-position: 5px;
-    background-repeat: no-repeat; } }
+  margin-right: 80px; }
 
 .logo {
   margin-left: 30px;
@@ -236,6 +218,23 @@ h1 {
   @media only screen and (max-width: 387px) {
     .gray-ground .white-blocks {
       margin-top: 18em; } }
+
+.nav-res {
+  height: 55px;
+  position: absolute;
+  width: 100%;
+  background-color: rgba(185, 185, 185, 0.19);
+  border: 0px;
+  text-align: center;
+  color: white;
+  display: none;
+  border-bottom: 1px solid white; }
+  @media only screen and (max-width: 454px) {
+    .nav-res {
+      display: block; } }
+
+.n-second {
+  margin-top: 55px; }
 
 .header-default {
   border-bottom: 1px solid #f9f9f9;
