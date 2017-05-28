@@ -8,10 +8,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-@Entity
-@Table(name = "favorito")
+
 public class Favorito {
-	@Id
+	
 	@EmbeddedId
 	private FavoritoId favoritoId;
 

@@ -11,23 +11,26 @@ import com.fasterxml.jackson.annotation.JsonView;
 import br.com.superpet.views.View;
 
 @Embeddable
+@Entity
 @Table(name = "favorito")
+
+
 public class FavoritoId {
 	@JsonView({View.All.class,View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_pet")
-	private Usuario pet;
+	private Pet pet;
 	
 	@JsonView({View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_usuario")
 	private Usuario usuario;
 
-	public Usuario getPet() {
+	public Pet getPet() {
 		return pet;
 	}
 
-	public void setPet(Usuario pet) {
+	public void setPet(Pet pet) {
 		this.pet = pet;
 	}
 

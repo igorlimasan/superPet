@@ -17,7 +17,7 @@
   </sec:http>
 
   <beans:bean id="jwtAuthenticationFilter"
-    class="br.gov.sp.fatec.security.JwtAuthenticationFilter">
+    class="JwtAuthenticationFilter">
   </beans:bean>
 
   <!-- Autenticador custom -->

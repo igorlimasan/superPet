@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "interesse")
 public class Interesse {
-	@Id	
+	
 	@EmbeddedId
 	private InteresseId interesseId;
 
