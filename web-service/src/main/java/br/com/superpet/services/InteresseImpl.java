@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import br.com.superpet.models.Interesse;
 import br.com.superpet.models.Pet;
+import br.com.superpet.models.Usuario;
 import br.com.superpet.repositories.InteresseRepository;
 
 @Service("interesseService")
@@ -29,6 +30,12 @@ public class InteresseImpl implements InteresseService{
 	public List<Pet> buscarPorUsuario(Long id) {
 		// TODO Auto-generated method stub
 		return interesseRep.findByUsuario(id);
+	}
+
+	@Override
+	public List<Usuario> buscarPorPet(Long id) {
+		// TODO Auto-generated method stub
+		return interesseRep.findByPet(id);
 	}
 
 }
