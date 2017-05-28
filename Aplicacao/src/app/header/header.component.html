@@ -1,3 +1,5 @@
-<p>
-  header works!
-</p>
+<header *ngIf="!urlAtiva('landingpage')">
+    <div class="logo-colorido logo"></div>
+    <button type="button">Cadastre-se</button>
+    <button type="button">Login</button>
+</header>
