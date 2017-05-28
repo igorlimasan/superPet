@@ -14,6 +14,7 @@ import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.co
 import { LoginComponent } from './login/login.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AlertaComponent } from './alerta/alerta.component';
+import { FotoComponent } from './foto/foto.component';
 
 const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -40,7 +41,7 @@ const appRoutes: Routes = [
     CadastroUsuarioComponent,
     LoginComponent,
     LandingPageComponent,    
-    AlertaComponent
+    AlertaComponent, FotoComponent
   ],
   
   imports: [
