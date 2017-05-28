@@ -4,6 +4,7 @@ import { Webservice } from '../helpers/webservice';
 import { Alerta } from '../alerta/alerta';
 import { Pet } from '../model/pet';
 import { Usuario } from '../model/usuario';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class PetService {

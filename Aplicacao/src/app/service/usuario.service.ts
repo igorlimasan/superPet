@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Webservice } from '../helpers/webservice';
 import { Alerta } from '../alerta/alerta';
 import { Usuario } from '../model/usuario';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class UsuarioService {
