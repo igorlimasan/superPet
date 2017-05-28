@@ -9,10 +9,10 @@ export class HeaderComponent implements OnInit {
   url: string;
   
   constructor(private _router: Router) {
-    this._router.events
-            .subscribe((e: NavigationStart) => {
-                this.url = e.url;
-        });
+      this._router.events
+          .subscribe((e: NavigationStart) => {
+              this.url = e.url;
+      });
   }
 
   ngOnInit() {
