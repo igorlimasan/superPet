@@ -19,15 +19,29 @@ button:hover{cursor: pointer;}
 
 .ossos-white{
     background-image: url(../images/bg-osso.png);
-    height: 600px;
+    height: 750px;
     position: absolute;
     width: 100%;
     opacity: 0.2;
 }
-.flexContainer {
-    display: flex;
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
-
-.inputField {
-    flex: 1;
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
 }
