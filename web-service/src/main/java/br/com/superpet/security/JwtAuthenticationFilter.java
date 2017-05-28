@@ -16,30 +16,25 @@ import org.springframework.web.filter.GenericFilterBean;
 
 import br.com.superpet.models.Usuario;
 
-
-
-public class JwtAuthenticationFilter extends GenericFilterBean {
-
-    private String tokenHeader = "Authorization";
+public class JwtAuthenticationFilter extends GenericFilterBean{
+	private String tokenHeader = "Authorization";
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		try {
-            HttpServletRequest servletRequest = (HttpServletRequest) request;
-            String authorization = servletRequest.getHeader(tokenHeader);
-            if (authorization != null) {
-                Usuario usuario = JwtUtils.parseToken(authorization.replaceAll("Bearer ", ""));
-                Authentication credentials = new UsernamePasswordAuthenticationToken(usuario.getUsername(), usuario.getPassword(), usuario.getAuthorities());
-                SecurityContextHolder.getContext().setAuthentication(credentials);
-            }
-            chain.doFilter(request, response);
-        }
-        catch(Throwable t) {
-            HttpServletResponse servletResponse = (HttpServletResponse) response;
-            servletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, t.getMessage());
-        }
-		
-	}
+			HttpServletRequest servletRequest = (HttpServletRequest) request;
+			String authorization = servletRequest.getHeader(tokenHeader);
+			if (authorization != null) {
+				Usuario usuario = JwtUtils.parseToken(authorization.replaceAll("Bearer ", ""));
+				Authentication credentials = new UsernamePasswordAuthenticationToken(usuario.getUsername(),
+						usuario.getPassword(), usuario.getAuthorities());
+				SecurityContextHolder.getContext().setAuthentication(credentials);
+			}
+			chain.doFilter(request, response);
+		} catch (Throwable t) {
+			HttpServletResponse servletResponse = (HttpServletResponse) response;
+			servletResponse.sendError(HttpServletResponse.SC_UNAUTHORIZED, t.getMessage());
+		}
 
-    
+	}
 }

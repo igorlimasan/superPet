@@ -15,6 +15,9 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonView;
+
+import br.com.superpet.views.View;
 
 @Entity
 @Table(name = "adocao")
@@ -22,23 +25,28 @@ public class Adocao {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@JsonView({View.All.class,View.Alternative.class})
 	private Long id;
 	
 	@OneToOne
 	@JoinColumn(name="fk_pet")
+	@JsonView({View.All.class,View.Alternative.class})
 	private Pet pet;
 	
 	@OneToOne
 	@JoinColumn(name = "fk_usuario_cuidador")
+	@JsonView({View.All.class,View.Alternative.class})
 	private Usuario cuidador;
 	
 	@OneToOne
 	@JoinColumn(name = "fk_usuario_adotador")
+	@JsonView({View.All.class,View.Alternative.class})
 	private Usuario adotador;
 	
 	@Column(name = "data")
 	@Temporal(value = TemporalType.TIMESTAMP)
 	@JsonFormat(pattern="dd/MM/yyyy")
+	@JsonView({View.All.class,View.Alternative.class})
 	private Date data;
 	
 	

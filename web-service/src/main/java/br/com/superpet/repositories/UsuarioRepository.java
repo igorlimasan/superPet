@@ -10,7 +10,7 @@ import br.com.superpet.models.Usuario;
 public interface UsuarioRepository extends CrudRepository<Usuario, Long>{
 	
 	public List<Usuario> findAll();
-	
+	public Usuario findById(Long id);
 	@Query("from Usuario u where u.login = ?1")
 	public Usuario findByLogin(String login);
 

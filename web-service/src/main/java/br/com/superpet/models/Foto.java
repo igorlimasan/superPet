@@ -8,17 +8,24 @@ import javax.persistence.Id;
 import javax.persistence.Lob;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonView;
+import com.mysql.jdbc.Blob;
+
+import br.com.superpet.views.View;
+
 @Entity
 @Table(name = "foto")
 public class Foto {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
+	@JsonView({View.All.class,View.Alternative.class})
 	private Long id;
 	
 	@Lob
     @Column(name="foto")
-    private byte[] foto;
+	@JsonView({View.All.class,View.Alternative.class})
+    private String foto;
 
 	public Long getId() {
 		return id;
@@ -28,11 +35,11 @@ public class Foto {
 		this.id = id;
 	}
 
-	public byte[] getFoto() {
+	public String getFoto() {
 		return foto;
 	}
 
-	public void setFoto(byte[] foto) {
+	public void setFoto(String foto) {
 		this.foto = foto;
 	}
 

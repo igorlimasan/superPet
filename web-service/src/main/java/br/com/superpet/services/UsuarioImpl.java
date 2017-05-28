@@ -27,5 +27,11 @@ public class UsuarioImpl implements UsuarioService {
 	public Usuario salvar(Usuario usuario) {
 		return usuarioRep.save(usuario);
 	}
+
+	@Override
+	public Usuario buscar(Long id) {
+		// TODO Auto-generated method stub
+		return usuarioRep.findById(id);
+	}
 	
 }

@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.annotation.JsonView;
 
 import br.com.superpet.models.Usuario;
+import br.com.superpet.security.CriptografarSenha;
 import br.com.superpet.services.UsuarioService;
 import br.com.superpet.views.View;
 
@@ -29,6 +30,8 @@ public class UsuarioController {
 	@JsonView(View.All.class)
 	@ResponseStatus(HttpStatus.CREATED)
 	public Usuario save(@RequestBody Usuario usuario, HttpServletRequest request, HttpServletResponse response) {
+		String senha = CriptografarSenha.criptografar(usuario.getSenha());
+		usuario.setSenha(senha);
 		usuario = usuarioService.salvar(usuario);
 		return usuario;
 	}	
