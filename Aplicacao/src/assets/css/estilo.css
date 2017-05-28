@@ -146,7 +146,7 @@ button:hover {
 @media (min-width: 1200px) {
   .container {
     width: 1170px; } }
-.the-main {
+.foto-container {
   width: calc(25% - 40px);
   margin-left: 20px;
   margin-right: 20px;
@@ -204,7 +204,7 @@ button:hover {
     .main img {
       height: 200px; } }
 @media (max-width: 990px) {
-  .the-main {
+  .foto-container {
     width: 28%; }
 
   .main {
@@ -212,7 +212,7 @@ button:hover {
     .main img {
       height: 200px; } }
 @media (max-width: 767px) {
-  .the-main {
+  .foto-container {
     width: 44%; }
 
   .main {
@@ -220,10 +220,10 @@ button:hover {
     .main img {
       height: 300px; } }
 @media (max-width: 697px) {
-  .the-main {
+  .foto-container {
     width: 42%; } }
 @media (max-width: 602px) {
-  .the-main {
+  .foto-container {
     width: 40%; }
 
   .main {
@@ -231,7 +231,7 @@ button:hover {
     .main img {
       height: 200px; } }
 @media (max-width: 490px) {
-  .the-main {
+  .foto-container {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px; }
@@ -483,6 +483,9 @@ h1 {
   padding: 15px;
   position: absolute;
   right: 0; }
+  .detalhe-pet .btn-galeria:hover {
+    background: #ffb64d;
+    color: white; }
 .detalhe-pet .btn-quero-adotar {
   background: #ffb64d;
   border: none;

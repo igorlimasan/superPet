@@ -16,6 +16,8 @@ import javax.persistence.Table;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonView;
 
 import br.com.superpet.views.View;
@@ -27,33 +29,43 @@ public class Usuario implements UserDetails{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
+	@JsonView({View.All.class,View.Alternative.class})
 	private Long id;
 	
 	@Column(name = "nome")
+	@JsonView({View.All.class,View.Alternative.class})
 	private String nome;
 	
 	@Column(name = "login")
+	@JsonView({View.All.class,View.Alternative.class})
 	private String login;
 	
 	@Column(name = "senha")
+	@JsonIgnore
 	private String senha;
 	
 	@Column(name = "email_contato")
+	@JsonView({View.All.class,View.Alternative.class})
 	private String emailContato;
 	
 	@Column(name = "numero_contato")
+	@JsonView({View.All.class,View.Alternative.class})
 	private String numeroContato;
 	
 	@Column(name = "facebook")
+	@JsonView({View.All.class,View.Alternative.class})
 	private String facebook;
 	
 	@Column(name = "cep")
+	@JsonView({View.All.class,View.Alternative.class})
 	private String cep;
 	
 	@Column(name = "estado")
+	@JsonView({View.All.class,View.Alternative.class})
 	private String estado;
 	
 	@Column(name = "cidade")
+	@JsonView({View.All.class,View.Alternative.class})
 	private String cidade;
 	
 	
@@ -85,6 +97,7 @@ public class Usuario implements UserDetails{
 	}
 
 
+	
 	public String getLogin() {
 		return login;
 	}
@@ -94,33 +107,33 @@ public class Usuario implements UserDetails{
 		this.login = login;
 	}
 
-
+	@JsonIgnore
 	public String getSenha() {
 		return senha;
 	}
 
-
+	@JsonProperty
 	public void setSenha(String senha) {
 		this.senha = senha;
 	}
 
 
-	public String getEmail_contato() {
+	public String getEmailContato() {
 		return emailContato;
 	}
 
 
-	public void setEmail_contato(String email_contato) {
+	public void setEmailContato(String email_contato) {
 		this.emailContato = email_contato;
 	}
 
 
-	public String getNumero_contato() {
+	public String getNumeroContato() {
 		return numeroContato;
 	}
 
 
-	public void setNumero_contato(String numero_contato) {
+	public void setNumeroContato(String numero_contato) {
 		this.numeroContato = numero_contato;
 	}
 
@@ -144,53 +157,54 @@ public class Usuario implements UserDetails{
 		this.autorizacoes = autorizacoes;
 	}
 
-
+	//@JsonIgnore
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
 		// TODO Auto-generated method stub
 		return autorizacoes;
 	}
 
-
+	@JsonIgnore
 	@Override
 	public String getPassword() {
 		// TODO Auto-generated method stub
 		return senha;
 	}
 
-
+	@JsonIgnore
 	@Override
 	public String getUsername() {
 		// TODO Auto-generated method stub
-		return null;
+		return login;
 	}
-
-
+	
+	@JsonIgnore
 	@Override
 	public boolean isAccountNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
-
+	@JsonIgnore
 	@Override
 	public boolean isAccountNonLocked() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
-
+	@JsonIgnore
 	@Override
 	public boolean isCredentialsNonExpired() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 
+	@JsonIgnore
 	@Override
 	public boolean isEnabled() {
 		// TODO Auto-generated method stub
-		return false;
+		return true;
 	}
 
 }

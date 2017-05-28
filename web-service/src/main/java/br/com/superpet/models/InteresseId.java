@@ -22,12 +22,12 @@ public class InteresseId implements Serializable{
 	@Column(name = "id")
 	private Long id;
 	
-	@JsonView({View.Alternative.class})
+	@JsonView({View.All.class,View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_pet")
 	private Pet pet;
 	
-	@JsonView({View.Alternative.class})
+	@JsonView({View.All.class,View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_usuario")
 	private Usuario usuario;

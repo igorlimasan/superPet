@@ -9,10 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -38,8 +38,8 @@ public class InteresseController {
 		return intersse;
 	}
 	
-	@RequestMapping(value = "/list")
-	public ResponseEntity<Collection<Usuario>> buscarByPet(@RequestParam(value="codigo_pet",defaultValue="1") Long codigo_pet){
+	@RequestMapping(value = "/list/{codigo_pet}")
+	public ResponseEntity<Collection<Usuario>> buscarByPet(@PathVariable(value="codigo_pet") Long codigo_pet){
 		return new  ResponseEntity<Collection<Usuario>>(interesseService.buscarPorPet(codigo_pet), HttpStatus.OK);
 	}
 }

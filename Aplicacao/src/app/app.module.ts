@@ -25,7 +25,7 @@ const appRoutes: Routes = [
   { path: 'favoritos', component: ListaPetComponent },
   { path: 'meus-pets', component: ListaPetComponent },
   { path: 'cadastro-pet', component: CadastroPetComponent },
-  { path: 'cadastro-pet/:id', component: CadastroPetComponent },
+  { path: 'editar-pet/:id', component: CadastroPetComponent },
   { path: 'detalhe-pet/:id', component: DetalhePetComponent },
   { path: '**', component: LandingPageComponent }
 ];

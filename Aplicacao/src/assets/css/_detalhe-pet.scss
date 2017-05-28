@@ -90,6 +90,11 @@
         padding: 15px;
         position: absolute;
         right: 0;
+
+        &:hover {
+            background: $amarelo;
+            color: white;
+        }
     }
 
     .btn-quero-adotar {

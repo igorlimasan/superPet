@@ -8,11 +8,16 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonView;
+
+import br.com.superpet.views.View;
+
 @Entity
 @Table(name = "interesse")
 public class Interesse {
 	
 	@EmbeddedId
+	@JsonView({View.All.class,View.Alternative.class})
 	private InteresseId interesseId;
 
 	public InteresseId getInteresseId() {

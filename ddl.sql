@@ -35,9 +35,11 @@ create table superpet.autorizacao_usuario(
 );
 create table superpet.tipo(
 	id int,
-    nome varchar(255),
+    tipo varchar(255),
     CONSTRAINT pk__tipo__id primary key(id)
 );
+
+alter table superpet.tipo change nome tipo varchar(255);
 
 
 insert into superpet.tipo values(1,'Cachorro');
@@ -98,10 +100,11 @@ create table superpet.favoritos(
 );
 
 create table superpet.foto(
-	id int,
-    foto blob,
+	id int auto_increment,
+    foto longblob,
     CONSTRAINT pk_foto_id primary key(id)
 );
+
 
 create table superpet.pet_foto(
 	fk_pet int,
