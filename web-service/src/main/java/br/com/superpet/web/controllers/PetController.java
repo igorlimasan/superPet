@@ -55,20 +55,31 @@ public class PetController {
 	@JsonView(View.All.class)
 	@ResponseStatus(HttpStatus.CREATED)
 	public Pet save(@RequestBody Pet pet, @PathVariable(value="codigo_usuario")  Long codigoUsuario,HttpServletRequest request, HttpServletResponse response) {
-		System.out.println(request.getParameter("id"));
-		for(Foto f:pet.getFotos()){
-			/*Foto foto = new Foto();
+		//System.out.println(request.getParameter("id"));
+		//System.out.println("id" + pet.getId());
+		if(pet.getId() == null){
+			for(Foto f:pet.getFotos()){
+				/*Foto foto = new Foto();
 			foto = f;*/
-			fotoService.salvar(f);
+				fotoService.salvar(f);
+			}
+			pet = petService.salvar(pet);
+			Adocao adocao = new Adocao();
+			if (usuarioService.buscar(codigoUsuario) != null) {
+				adocao.setCuidador(usuarioService.buscar(codigoUsuario));
+				adocao.setPet(pet);
+				adocaoService.salvar(adocao);
+			}
+			
 		}
-		pet = petService.salvar(pet);
-		Long id = Long.valueOf(request.getParameter("id"));
-		Adocao adocao = new Adocao();
-		if (usuarioService.buscar(id) != null) {
-			adocao.setCuidador(usuarioService.buscar(id));
+		else{
+			Pet animal = petService.buscar(pet.getId());
+			pet.setFotos(animal.getFotos());
+			pet = petService.salvar(pet);
+			
 		}
-		adocao.setPet(pet);
-		adocaoService.salvar(adocao);
+		
+		//Long id = Long.valueOf(request.getParameter("id"));
 		
 		return pet;
 	}
@@ -106,8 +117,8 @@ public class PetController {
 	
 	
 	
-	@RequestMapping(value = "/getById")
-	public ResponseEntity<Pet> get(@RequestParam(value="id",defaultValue="1") Long id){
+	@RequestMapping(value = "/get/{id}")
+	public ResponseEntity<Pet> get(@PathVariable(value="id") Long id){
 		Pet pet = petService.buscar(id);
 		if(pet == null){
 			return new ResponseEntity<Pet>(HttpStatus.NOT_FOUND);

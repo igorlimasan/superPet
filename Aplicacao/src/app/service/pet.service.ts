@@ -12,9 +12,10 @@ export class PetService {
 	constructor(private _webservice: Webservice) {
 
 	}
+	usuario:Usuario = JSON.parse(sessionStorage.getItem('usuario'))
 
 	salvar(pet: Pet): Observable<Alerta> {
-		return this._webservice.post('pet/save', JSON.stringify(pet))
+		return this._webservice.post('pet/save/'+this.usuario.id, JSON.stringify(pet))
 			.map(() => new Alerta('Pet salvo com sucesso', 'sucesso'));
 		
 	}
