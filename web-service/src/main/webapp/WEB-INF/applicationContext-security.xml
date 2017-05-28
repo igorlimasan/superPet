@@ -17,7 +17,7 @@
   </sec:http>
 
   <beans:bean id="jwtAuthenticationFilter"
-    class="JwtAuthenticationFilter">
+    class="br.com.superpet.security.JwtAuthenticationFilter">
   </beans:bean>
 
   <!-- Autenticador custom -->

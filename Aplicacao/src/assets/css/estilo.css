@@ -31,6 +31,21 @@ button:hover {
   width: 178px;
   height: 63px; }
 
+.pegada-amarela {
+  background: url("imgs/icones.png") no-repeat -568px -86px;
+  width: 76px;
+  height: 61px; }
+
+.coracao-vermelho {
+  background: url("imgs/icones.png") no-repeat -573px -172px;
+  width: 67px;
+  height: 59px; }
+
+.user-azul {
+  background: url("imgs/icones.png") no-repeat -573px -1px;
+  width: 65px;
+  height: 59px; }
+
 .ossos-white {
   background-image: url(../images/bg-osso.png);
   height: 750px;
@@ -93,7 +108,7 @@ header {
 
 h1 {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 150px;
   color: white;
   font-size: 60px; }
 
@@ -121,9 +136,14 @@ h1 {
   background-color: transparent;
   color: #fc6180; }
 
-.pet {
-  background-color: red;
-  height: 200px; }
+.center-xs {
+  margin-top: -120px; }
+
+.pets-landing-page img {
+  height: 100%;
+  width: 100%;
+  z-index: 40;
+  position: relative; }
 
 .header-default {
   border-bottom: 1px solid #f9f9f9;

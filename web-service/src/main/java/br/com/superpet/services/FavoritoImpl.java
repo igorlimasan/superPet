@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.superpet.models.Favorito;
+import br.com.superpet.models.Pet;
 import br.com.superpet.repositories.FavoritoRepository;
 
 @Service("favoritoService")
@@ -15,7 +16,7 @@ public class FavoritoImpl implements FavoritoService {
 	private FavoritoRepository favoritoRep;
 	@Override
 	public Favorito buscar(long id) {
-		return favoritoRep.find(id);
+		return favoritoRep.findByUsuario(id);
 	}
 
 	@Override
@@ -26,6 +27,12 @@ public class FavoritoImpl implements FavoritoService {
 	@Override
 	public Favorito salvar(Favorito favorito) {
 		return favoritoRep.save(favorito);
+	}
+
+	@Override
+	public List<Pet> buscarPorUsuario(Long id) {
+		
+		return favoritoRep.findByUsuario(id);
 	}
 
 }

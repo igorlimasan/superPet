@@ -16,7 +16,7 @@ public class SexoImpl implements SexoService {
 	
 	@Override
 	public Sexo buscar(long id) {
-		return sexoRep.find(id);
+		return sexoRep.findById(id);
 	}
 
 	@Override
@@ -24,9 +24,6 @@ public class SexoImpl implements SexoService {
 		return sexoRep.findAll();
 	}
 
-	@Override
-	public Sexo salvar(Sexo sexo) {
-		return sexoRep.save(sexo);
-	}
+	
 
 }

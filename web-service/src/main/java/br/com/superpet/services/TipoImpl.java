@@ -16,7 +16,7 @@ public class TipoImpl implements TipoService {
 	private TipoRepository tipoRep;
 	@Override
 	public Tipo buscar(long id) {
-		return tipoRep.find(id);
+		return tipoRep.findById(id);
 	}
 
 	@Override
@@ -24,9 +24,6 @@ public class TipoImpl implements TipoService {
 		return tipoRep.findAll();
 	}
 
-	@Override
-	public Idade salvar(Tipo tipo) {
-		return tipoRep.save(tipo);
-	}
+	
 
 }
