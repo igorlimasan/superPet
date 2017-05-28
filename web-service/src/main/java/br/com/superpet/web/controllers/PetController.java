@@ -55,16 +55,18 @@ public class PetController {
 	@JsonView(View.All.class)
 	@ResponseStatus(HttpStatus.CREATED)
 	public Pet save(@RequestBody Pet pet, HttpServletRequest request, HttpServletResponse response) {
-		//System.out.println(request.getParameter("id"));
+		System.out.println(request.getParameter("id"));
 		for(Foto f:pet.getFotos()){
 			/*Foto foto = new Foto();
 			foto = f;*/
 			fotoService.salvar(f);
 		}
 		pet = petService.salvar(pet);
-		//Long id = Long.valueOf();
+		Long id = Long.valueOf(request.getParameter("id"));
 		Adocao adocao = new Adocao();
-		adocao.setCuidador(usuarioService.buscar(1l));
+		if (usuarioService.buscar(id) != null) {
+			adocao.setCuidador(usuarioService.buscar(id));
+		}
 		adocao.setPet(pet);
 		adocaoService.salvar(adocao);
 		
