@@ -12,13 +12,37 @@ a {
     text-decoration: none;
 }
 
-input[type="text"] {
+input[type="text"], select, textarea {
+    background: white;
     border: 1px solid $cinza2;
     border-radius: 5px;
 }
 
+.cadastro {
+	min-height: 800px;
+
+	input, select, textarea {
+		padding: 0;
+		width: 100%;
+		margin-bottom: 15px;
+		margin-top: 5px;
+	}
+
+	input, select {
+		height: 35px;
+	}
+
+	select {
+		height: 37px;
+	}
+}
+
 button{font-size: 20px;}
 button:hover{cursor: pointer;}
+
+.bg-cinza {
+	background: $cinza1;
+}
 
 .logo-white {
 	background: url('../images/icones.png') no-repeat -8px -360px;

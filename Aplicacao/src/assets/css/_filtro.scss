@@ -1,6 +1,7 @@
 .filter {
     border-bottom: 1px solid $cinza2;
     display: block;
+    font-size: 0.9rem;
     padding: 25px;
 
     label {
@@ -9,8 +10,7 @@
         margin-bottom: 5px; 
     }
 
-    input {
-        margin: 7px 0;
+    input[type="text"] {
         height: 30px;
         width: 100%;
     }

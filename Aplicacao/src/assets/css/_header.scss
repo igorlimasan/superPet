@@ -1,4 +1,30 @@
 .header-default {
     border-bottom: 1px solid $cinza1; 
     display: block;
+    
+    .logo {
+        margin-left: 30px;
+        margin-top: 17px;
+        float: left;
+        margin-right: 25px;
+        position: relative;
+    }
+
+    a {
+        border: 0px;
+        color: $cinza4;
+        width: auto;
+        background-color: transparent;
+        padding: 5px;
+        margin-top: 45px;
+        margin-right: 15px;
+
+        &.left {
+            float: left;
+        }
+
+        &.right {
+            float: right;
+        }
+    }
 }

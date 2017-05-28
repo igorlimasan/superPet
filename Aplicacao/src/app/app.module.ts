@@ -21,6 +21,8 @@ const appRoutes: Routes = [
   { path: 'cadastro-usuario', component: CadastroUsuarioComponent },
   { path: 'cadastro-usuario/:id', component: CadastroUsuarioComponent },
   { path: 'superpets', component: ListaPetComponent },
+  { path: 'favoritos', component: ListaPetComponent },
+  { path: 'meus-pets', component: ListaPetComponent },
   { path: 'cadastro-pet', component: CadastroPetComponent },
   { path: 'cadastro-pet/:id', component: CadastroPetComponent },
   { path: 'detalhe-pet/:id', component: DetalhePetComponent },
