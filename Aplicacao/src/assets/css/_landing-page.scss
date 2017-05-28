@@ -22,7 +22,34 @@ header{
         position: absolute;
     }
 }
-.cadastre{margin-right: 100px;}
+.cadastre{
+    margin-right: 100px;
+        @media only screen 
+        and (max-width: 454px){
+            color: transparent;
+            width: 40px;
+            height: 40px;
+            margin-right: 50px;
+            background-image: url('../images/signup.png');
+            background-size: 31px 30px;
+            background-position: 5px;
+            background-repeat: no-repeat;
+        }
+    }
+.login{
+    @media only screen 
+    and (max-width: 454px){
+        color: transparent;
+        width: 40px;
+        height: 40px;
+        background-image: url(../images/key.png);
+        background-size: 31px 28px;
+        margin-right: 6px;
+        background-position: 5px;
+        background-repeat: no-repeat;
+    }
+}
+
 .logo{
     margin-left: 30px;
     margin-top: 17px;
@@ -57,6 +84,10 @@ h1{
     border: 0px;
     background-color: transparent;
     color: $rosa;
+    @media only screen 
+    and (max-width: 420px){
+        margin-right: 7%;
+    }
 }
 .petland{
         margin-top: -570px;
