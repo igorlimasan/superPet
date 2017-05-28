@@ -8,15 +8,40 @@
             height: 100%;
             padding: 0;
             position: relative;
-            width: 80%;
-            
+            width: 80%;            
         }
 
         .nome {
             left: 0;
             position: absolute;
             bottom: 25px;
-        }        
+            background-color: transparent;
+            top: 0px;
+            height: 100%;
+            width: auto;
+
+            i{
+                position: absolute;
+                top: 110px;
+                margin-left: 29px;
+            }
+            i:hover{
+                color: $vermelho;
+                cursor: pointer;
+            }
+
+            p{
+                margin-left: 180px;
+                margin-top: -22px;
+            }
+        }
+        img{
+            width: 150px;
+            margin-top: 35px;
+            height: 150px;
+            border-radius: 5px;
+            border: 3px solid white;
+        }   
     }
 
 
@@ -38,6 +63,7 @@
         .descricao-right {
             width: 30%;
             float: left;
+            margin-top: 30px;
         }
 
         @media (max-width: 767px) {
@@ -73,5 +99,59 @@
         color: white;
         padding: 15px;
         width: 100%;
+    }
+}
+.animal{
+    margin-top: -19px;
+    margin-left: 55px;
+}
+.gen-ico{
+    margin-top: -48px;
+    margin-left: 150px;
+}
+.genero{
+    margin-top: -20px;
+    margin-left: 200px;
+}
+.descricao-left h2{margin-top: 30px;}
+
+.an2{
+    margin-top: -66px;
+    margin-left: 100px;
+}
+.an3{
+    margin-top: -84px;
+    margin-left: 215px;
+}
+.an4{margin-top: 40px;}
+.an5{
+    margin-top: -15px;
+    margin-left: 60px;
+}
+.an6{
+    margin-left: 5px;
+    margin-top: 30px;
+}
+.an7{
+    margin-top: -20px;
+    margin-left: 60px;
+}
+
+@media only screen 
+and (max-width: 600px){
+    .detalhe-pet .capa {
+        height: 288px;
+    }
+    .detalhe-pet .btn-galeria {
+        right: 100;
+        width: 100%;
+    }
+}
+
+@media only screen 
+and (max-width: 944px){
+    .descricao-left {
+        margin-right: 4%;
+        width: 50%;
     }
 }
