@@ -1,12 +1,16 @@
 .main{
-    height: 400px;
-    width: 300px;
+    height: 350px;
+    width: calc(25% - 40px);
+    float: left;
+    margin-left: 20px;
+    margin-right: 20px;
     background-color: white;
-    border-bottom: 5px solid $laranja;
+    border-bottom: 5px solid $laranja;    
+    margin-top: 30px;
 
     img{
-        width: 300px;
-        height: 300px;
+        width: 100%;
+        height: 250px;
     }
     .nome{
         margin-left: 10px;
@@ -28,5 +32,79 @@
 
     &:hover{
         i{color: $vermelho;}
+    }
+}
+.list-pet-view{
+	background-color: #f5f5f5;
+    width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+@media (max-width: 1200px) {
+    .main{
+        height: 300px;
+        img{
+            height: 200px;
+        }
+    }
+}
+@media (max-width: 990px) {
+    .main{
+        height: 300px;
+        width: 28%;
+        img{
+            height: 200px;
+        }
+    }
+}
+@media (max-width: 767px) {
+    .main{
+        height: 400px;
+        width: 44%;
+        img{
+            height: 300px;
+        }
+    }
+}
+@media (max-width: 697px) {
+    .main{
+        width: 42%;
+    }
+}
+@media (max-width: 602px) {
+    .main{
+        height: 300px;
+        width: 40%;
+        img{
+            height: 200px;
+        }
+    }
+}
+@media (max-width: 490px) {
+    .main{
+        margin-left: 0px;
+        margin-right: 0px;
+        height: 500px;
+        width: 100%;
+        img{
+            height: 400px;
+        }
+    }
+}
+@media (max-width: 420px) {
+    .main{
+        height: 425px;
+        img{
+            height: 325px;
+        }
+    }
+}
+@media (max-width: 350px) {
+    .main{
+        height: 375px;
+        img{
+            height: 275px;
+        }
     }
 }
