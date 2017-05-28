@@ -39,7 +39,7 @@ public class InteresseController {
 	}
 	
 	@RequestMapping(value = "/list/{codigo_pet}")
-	public ResponseEntity<Collection<Usuario>> buscarByPet(@PathVariable(value="codigo_pet") Long codigo_pet){
-		return new  ResponseEntity<Collection<Usuario>>(interesseService.buscarPorPet(codigo_pet), HttpStatus.OK);
+	public ResponseEntity<Collection<Usuario>> buscarByPet(@PathVariable(value="codigo_pet") Long codigoPet){
+		return new  ResponseEntity<Collection<Usuario>>(interesseService.buscarPorPet(codigoPet), HttpStatus.OK);
 	}
 }

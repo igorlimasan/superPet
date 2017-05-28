@@ -51,10 +51,10 @@ public class PetController {
 	@Autowired
 	private UsuarioService usuarioService;
 	
-	@RequestMapping(value = "/save", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+	@RequestMapping(value = "/save/{codigo_usuario}", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
 	@JsonView(View.All.class)
 	@ResponseStatus(HttpStatus.CREATED)
-	public Pet save(@RequestBody Pet pet, HttpServletRequest request, HttpServletResponse response) {
+	public Pet save(@RequestBody Pet pet, @PathVariable(value="codigo_usuario")  Long codigoUsuario,HttpServletRequest request, HttpServletResponse response) {
 		System.out.println(request.getParameter("id"));
 		for(Foto f:pet.getFotos()){
 			/*Foto foto = new Foto();
@@ -80,19 +80,19 @@ public class PetController {
 	}
 	
 	@RequestMapping(value = "/list/{codigo_usuario}")
-	public ResponseEntity<Collection<Pet>> buscarByUsuario(@PathVariable(value="codigo_usuario") Long codigo_usuario){
+	public ResponseEntity<Collection<Pet>> buscarByUsuario(@PathVariable(value="codigo_usuario") Long codigoUsuario){
 		System.out.println("2");
-		List<Pet> pets = adocaoService.buscarPorCuidador(codigo_usuario);
+		List<Pet> pets = adocaoService.buscarPorCuidador(codigoUsuario);
 		if(pets == null){
 			return new ResponseEntity<Collection<Pet>>(HttpStatus.NOT_FOUND);
 		}
-		return new  ResponseEntity<Collection<Pet>>(adocaoService.buscarPorCuidador(codigo_usuario), HttpStatus.OK);
+		return new  ResponseEntity<Collection<Pet>>(adocaoService.buscarPorCuidador(codigoUsuario), HttpStatus.OK);
 	}
 	
 	
 	@RequestMapping(value = "/list/favoritos/{codigo_usuario}")
-	public ResponseEntity<Collection<Pet>> buscarByUsuarioFavorito(@PathVariable(value="codigo_usuario") Long codigo_usuario){
-		List<Pet> pets = favoritoService.buscarPorUsuario(codigo_usuario);
+	public ResponseEntity<Collection<Pet>> buscarByUsuarioFavorito(@PathVariable(value="codigo_usuario") Long codigoUsuario){
+		List<Pet> pets = favoritoService.buscarPorUsuario(codigoUsuario);
 		if(pets == null){
 			return new ResponseEntity<Collection<Pet>>(HttpStatus.NOT_FOUND);
 		}

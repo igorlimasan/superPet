@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Webservice } from '../helpers/webservice';
 import { Alerta } from '../alerta/alerta';
 import { Pet } from '../model/pet';
+import { Usuario } from '../model/usuario';
 
 @Injectable()
 export class PetService {
@@ -17,14 +18,14 @@ export class PetService {
 		
 	}
 
-	listar(status: boolean): Observable<Pet[]>  {
+	listar(usuario: Usuario): Observable<Pet[]>  {
 		//let colaborador: Colaborador = JSON.parse(sessionStorage.getItem('colaborador'));
 		let path: string ='pet/list/';
 
-		if(status == null) return this._webservice.get(path)
+		if(usuario.autorizacoes && usuario.autorizacoes[1].autorizacao == "cuidador") return this._webservice.get(path + usuario.id)
 			.map(res => res.json());
 
-		return this._webservice.get(path + status)
+		return this._webservice.get(path)
 			.map(res => res.json());
 	}
 

@@ -8,8 +8,12 @@ import { Usuario } from '../model/usuario';
 @Injectable()
 export class UsuarioService {
 
-  constructor(private _webservice: Webservice) {
+  	constructor(private _webservice: Webservice) {
 
+	}
+	
+	login(usuario: Usuario): Observable<Usuario> {
+		return this._webservice.post('usuario/login', JSON.stringify(usuario)).map(res => res.json());
 	}
 
 	salvar(usuario: Usuario): Observable<Alerta> {
