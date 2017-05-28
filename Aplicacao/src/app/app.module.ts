@@ -43,8 +43,7 @@ const appRoutes: Routes = [
     LoginComponent,
     LandingPageComponent,    
     AlertaComponent, 
-    FotoComponent,
-    DetalhePetComponent
+    FotoComponent
   ],
   
   imports: [
