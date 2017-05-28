@@ -9,14 +9,22 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "adocao")
+@Table(name = "interesse")
 public class Interesse {
-	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id")
-	private Long id;
-	
+	@Id	
 	@EmbeddedId
 	private InteresseId interesseId;
+
+	public InteresseId getInteresseId() {
+		return interesseId;
+	}
+
+	public void setInteresseId(InteresseId interesseId) {
+		this.interesseId = interesseId;
+	}
+	
+	
+	
+	
 
 }
