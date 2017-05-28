@@ -13,6 +13,8 @@ public class AdocaoController {
 	@Autowired
 	private AdocaoService adocaoService;
 	
+	
+	
 
 
 }

@@ -25,18 +25,18 @@ public class InteresseId implements Serializable{
 	@JsonView({View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_pet")
-	private Usuario pet;
+	private Pet pet;
 	
 	@JsonView({View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_usuario")
 	private Usuario usuario;
 
-	public Usuario getPet() {
+	public Pet getPet() {
 		return pet;
 	}
 
-	public void setPet(Usuario pet) {
+	public void setPet(Pet pet) {
 		this.pet = pet;
 	}
 
