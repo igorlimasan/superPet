@@ -14,6 +14,7 @@
 				<div class="col-sm-4 col-xs-12">
 					<label for="tipo">Tipo</label>
 					<select name="tipo" id="tipo" [(ngModel)]="pet.tipo.id">
+						<option [value]="pet.tipo.id == null ? pet.tipo.id:false">Selecione</option>
 						<option value="1"> Cachorro</option>
 						<option value="2"> Gato</option>
 					</select>
@@ -31,6 +32,7 @@
 				<div class="col-sm-4 col-xs-12">
 					<label for="porte">Porte</label>
 					<select name="porte" id="porte" [(ngModel)]="pet.porte.id">
+						<option [value]="pet.porte.id == null ? pet.porte.id:false">Selecione</option>
 						<option value="1"> Pequeno</option>
 						<option value="2"> Médio</option>
 						<option value="3"> Grande</option>
@@ -39,7 +41,7 @@
 				<div class="col-sm-4 col-xs-12">
 					<label for="sexo">Sexo</label>
 					<select name="sexo" id="sexo" [(ngModel)]="pet.sexo.id">
-						<option value=""> Selecione</option>
+						<option [value]="pet.sexo.id == null ? pet.sexo.id:false">Selecione</option>
 						<option value="1"> Macho</option>
 						<option value="2"> Fêmea</option>
 					</select>
@@ -47,7 +49,7 @@
 				<div class="col-sm-4 col-xs-12">
 					<label for="idade">Idade</label>
 					<select name="idade" id="idade" [(ngModel)]="pet.idade.id">
-						<option value=""> Selecione</option>
+						<option [value]="pet.idade.id == null ? pet.idade.id:false">Selecione</option>
 						<option value="1"> Filhote</option>
 						<option value="2"> Jovem</option>
 						<option value="2"> Adulto</option>
