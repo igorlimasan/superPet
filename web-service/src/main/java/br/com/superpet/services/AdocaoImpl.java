@@ -6,16 +6,18 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import br.com.superpet.models.Adocao;
+import br.com.superpet.models.Pet;
 import br.com.superpet.repositories.AdocaoRepository;
 
-@Service("AdocaoService")
+@Service("adocaoService")
 public class AdocaoImpl implements AdocaoService {
 
 	@Autowired
 	private AdocaoRepository adocaoRep;
+	
 	@Override
 	public Adocao buscar(long id) {
-		return adocaoRep.find(id);
+		return adocaoRep.findById(id);
 	}
 
 	@Override
@@ -25,7 +27,19 @@ public class AdocaoImpl implements AdocaoService {
 
 	@Override
 	public Adocao salvar(Adocao adocao) {
-		return adocaoRep.save(idade);
+		return adocaoRep.save(adocao);
+	}
+
+	@Override
+	public List<Pet> buscarNaoAdotados() {
+		// TODO Auto-generated method stub
+		return adocaoRep.findNotAdopted();
+	}
+
+	@Override
+	public List<Pet> buscarPorCuidador(Long id) {
+		// TODO Auto-generated method stub
+		return adocaoRep.findByCuidador(id);
 	}
 	
 }
