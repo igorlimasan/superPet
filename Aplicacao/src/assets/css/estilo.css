@@ -146,6 +146,84 @@ button:hover {
 @media (min-width: 1200px) {
   .container {
     width: 1170px; } }
+.signup-form {
+  background: #fc6180;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #fc6180, #fca72b);
+  /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(left top, #fc6180, #fca72b);
+  /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(left top, #fc6180, #fca72b);
+  /* For Firefox 3.6 to 15 */
+  background: linear-gradient(left top, #fc6180, #fca72b);
+  /* Standard syntax */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28d00', endColorstr='#f2ca29', GradientType=1 );
+  height: 100%;
+  width: 100%;
+  position: absolute; }
+  .signup-form .ossos-white {
+    height: 100% !important; }
+  .signup-form form {
+    position: absolute;
+    z-index: 50;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    max-width: 800px;
+    background-color: #ffffff;
+    top: 100px;
+    border-radius: 5px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.17); }
+  .signup-form h1 {
+    color: #fca72b;
+    font-size: 30px;
+    margin-top: 50px;
+    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 70px; }
+  .signup-form .user-label {
+    height: 35px;
+    width: 100%;
+    font-size: 18px;
+    margin-left: 30px; }
+  .signup-form .user-input {
+    margin-top: 10px;
+    margin-left: 25px;
+    width: calc(100% - 50px);
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid #ededed; }
+    .signup-form .user-input:focus {
+      background-color: #f9f9f9; }
+  .signup-form .senha-label {
+    margin-top: 15px; }
+  .signup-form input[type="submit"] {
+    margin-top: 30px;
+    margin-left: 25px;
+    width: calc(100% - 50px);
+    height: 60px;
+    font-size: 20px;
+    background-color: white;
+    color: #fca72b;
+    border: 1px solid #fca72b;
+    border-radius: 5px; }
+  .signup-form input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #fca72b;
+    color: white; }
+  .signup-form .realizar {
+    margin-top: 15px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    width: calc(100% - 50px);
+    font-size: 17px;
+    background-color: white;
+    color: #fc6180;
+    border: 0px; }
+    .signup-form .realizar:hover {
+      cursor: pointer;
+      text-decoration: underline; }
+
 .foto-container {
   width: calc(25% - 40px);
   margin-left: 20px;
@@ -619,85 +697,10 @@ h1 {
   padding: 10px 20px;
   width: calc(100% - 40px); }
 
-.signup-form {
-  background: #fc6180;
-  /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left top, #fc6180, #fca72b);
-  /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(left top, #fc6180, #fca72b);
-  /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(left top, #fc6180, #fca72b);
-  /* For Firefox 3.6 to 15 */
-  background: linear-gradient(left top, #fc6180, #fca72b);
-  /* Standard syntax */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28d00', endColorstr='#f2ca29', GradientType=1 );
-  height: 100%;
-  width: 100%;
-  position: absolute; }
-  .signup-form .ossos-white {
-    height: 100% !important; }
-  .signup-form form {
-    position: absolute;
-    z-index: 50;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    max-width: 800px;
-    background-color: #ffffff;
-    top: 100px;
-    border-radius: 5px;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.17); }
-  .signup-form h1 {
-    color: #fca72b;
-    font-size: 30px;
-    margin-top: 50px;
-    text-align: left;
-    margin-left: 30px;
-    margin-bottom: 70px; }
-  .signup-form .user-label {
-    height: 35px;
-    width: 100%;
-    font-size: 18px;
-    margin-left: 30px; }
-  .signup-form .user-input {
-    margin-top: 10px;
-    margin-left: 25px;
-    width: calc(100% - 50px);
-    height: 45px;
-    border-radius: 5px;
-    border: 1px solid #ededed; }
-    .signup-form .user-input:focus {
-      background-color: #f9f9f9; }
-  .signup-form .senha-label {
-    margin-top: 15px; }
+.cad-form {
+  height: 140% !important; }
 
-input[type="submit"] {
-  margin-top: 30px;
-  margin-left: 25px;
-  width: calc(100% - 50px);
-  height: 60px;
-  font-size: 20px;
-  background-color: white;
-  color: #fca72b;
-  border: 1px solid #fca72b;
-  border-radius: 5px; }
-
-input[type="submit"]:hover {
-  cursor: pointer;
-  background-color: #fca72b;
-  color: white; }
-
-.realizar {
-  margin-top: 15px;
-  margin-left: 25px;
-  margin-bottom: 20px;
-  width: calc(100% - 50px);
-  font-size: 17px;
-  background-color: white;
-  color: #fc6180;
-  border: 0px; }
-  .realizar:hover {
-    cursor: pointer;
-    text-decoration: underline; }
+.cadastro-btn {
+  margin-bottom: 40px; }
 
 /*# sourceMappingURL=estilo.css.map */

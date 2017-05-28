@@ -163,3 +163,89 @@ button:hover{cursor: pointer;}
     width: 1170px;
   }
 }
+
+//Formulários
+.signup-form{
+    @include linear-gradient(left top, $rosa, $laranja);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f28d00', endColorstr='#f2ca29', GradientType=1 );
+    height: 100%;
+    width: 100%;
+    position: absolute;
+
+    .ossos-white{
+        height: 100% !important;
+    }
+
+    form{
+        position: absolute;
+        z-index: 50;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        max-width: 800px;
+        background-color: #ffffff;
+        top: 100px;
+        border-radius: 5px;
+        box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.17);
+    }
+    h1{
+        color: $laranja;
+        font-size: 30px;
+        margin-top: 50px;
+        text-align: left;
+        margin-left: 30px;
+        margin-bottom: 70px;
+    }
+    .user-label{
+        height: 35px;
+        width: 100%;
+        font-size: 18px;
+        margin-left: 30px;
+    }
+    .user-input{
+        margin-top: 10px;
+        margin-left: 25px;
+        width: calc(100% - 50px);
+        height: 45px;
+        border-radius: 5px;
+        border: 1px solid $cinza2;
+
+        &:focus{
+            background-color: $cinza1;
+        }
+    }
+    .senha-label{margin-top: 15px;}
+
+    input[type="submit"]
+    {
+        margin-top: 30px;
+        margin-left: 25px;
+        width: calc(100% - 50px);
+        height: 60px;
+        font-size: 20px;
+        background-color: white;
+        color: $laranja;
+        border: 1px solid $laranja;
+        border-radius: 5px;
+    }
+    input[type="submit"]:hover
+    {
+        cursor: pointer;
+        background-color: $laranja;
+        color: white;
+    }
+    .realizar{
+        margin-top: 15px;
+        margin-left: 25px;
+        margin-bottom: 20px;
+        width: calc(100% - 50px);
+        font-size: 17px;
+        background-color: white;
+        color: $rosa;
+        border: 0px; 
+        &:hover{
+            cursor: pointer;
+            text-decoration: underline;
+        }
+    }
+}
