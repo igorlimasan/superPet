@@ -11,9 +11,7 @@ a {
 
 input[type="text"] {
   border: 1px solid #ededed;
-  border-radius: 5px;
-  height: 30px;
-  width: 100%; }
+  border-radius: 5px; }
 
 button {
   font-size: 20px; }
@@ -166,29 +164,6 @@ h1 {
   z-index: 40;
   position: relative; }
 
-.header-default {
-  border-bottom: 1px solid #f9f9f9;
-  display: block; }
-
-.filter {
-  border-bottom: 1px solid #ededed;
-  display: block;
-  padding: 25px; }
-  .filter label {
-    display: block;
-    font-size: 1.2rem;
-    margin-bottom: 5px; }
-  .filter input {
-    margin: 7px 0; }
-
-.search input {
-  border: none;
-  border-bottom: 1px solid #ededed;
-  display: block;
-  height: 40px;
-  padding: 10px;
-  width: 100%; }
-
 .photos div {
   padding-left: 0px;
   padding-right: 0px; }
@@ -232,5 +207,29 @@ h1 {
     .gray-ground .white-blocks {
       margin-top: 18em; } }
 
+.header-default {
+  border-bottom: 1px solid #f9f9f9;
+  display: block; }
+
+.filter {
+  border-bottom: 1px solid #ededed;
+  display: block;
+  padding: 25px; }
+  .filter label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px; }
+  .filter input {
+    margin: 7px 0;
+    height: 30px;
+    width: 100%; }
+
+.search input {
+  border: none;
+  border-bottom: 1px solid #ededed;
+  display: block;
+  height: 40px;
+  padding: 10px;
+  width: 100%; }
 
 /*# sourceMappingURL=estilo.css.map */
