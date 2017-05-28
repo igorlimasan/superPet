@@ -1,12 +1,15 @@
+.the-main{    
+    width: calc(25% - 40px);    
+    margin-left: 20px;
+    margin-right: 20px;        
+    margin-top: 90px;    
+    float: left;
+}
 .main{
     height: 350px;
-    width: calc(25% - 40px);
-    float: left;
-    margin-left: 20px;
-    margin-right: 20px;
+    width: 100%;
     background-color: white;
-    border-bottom: 5px solid $laranja;    
-    margin-top: 30px;
+    border-bottom: 5px solid $laranja;
 
     img{
         width: 100%;
@@ -40,6 +43,17 @@
     height: auto;
     position: absolute;
 }
+.edit-btn{
+    margin-top: 30px;
+    width: 100%;
+    border: 0px;
+    height: 45px;
+    background-color: $cinza4;
+    border-radius: 5px;
+    color: white;
+
+    &:hover{background-color: $laranja;}
+}
 
 @media (max-width: 1200px) {
     .main{
@@ -50,43 +64,45 @@
     }
 }
 @media (max-width: 990px) {
+    .the-main{width: 28%;}
     .main{
         height: 300px;
-        width: 28%;
         img{
             height: 200px;
         }
     }
 }
 @media (max-width: 767px) {
+    .the-main{width: 44%;}
     .main{
         height: 400px;
-        width: 44%;
         img{
             height: 300px;
         }
     }
 }
 @media (max-width: 697px) {
-    .main{
+    .the-main{
         width: 42%;
     }
 }
 @media (max-width: 602px) {
+    .the-main{width: 40%;}
     .main{
         height: 300px;
-        width: 40%;
         img{
             height: 200px;
         }
     }
 }
 @media (max-width: 490px) {
-    .main{
+    .the-main{
+        width: 100%;        
         margin-left: 0px;
         margin-right: 0px;
+    }
+    .main{
         height: 500px;
-        width: 100%;
         img{
             height: 400px;
         }
