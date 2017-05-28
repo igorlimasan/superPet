@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.annotation.JsonView;
 
 import br.com.superpet.models.Interesse;
-import br.com.superpet.models.Pet;
+import br.com.superpet.models.Usuario;
 import br.com.superpet.services.InteresseService;
 import br.com.superpet.views.View;
 
@@ -39,7 +39,7 @@ public class InteresseController {
 	}
 	
 	@RequestMapping(value = "/list")
-	public ResponseEntity<Collection<Interesse>> buscarByPet(@RequestParam(value="codigo_pet",defaultValue="1") Long codigo_pet){
-		return new  ResponseEntity<Collection<Interesse>>(interesseService.buscarPorPet(codigo_pet), HttpStatus.OK);
+	public ResponseEntity<Collection<Usuario>> buscarByPet(@RequestParam(value="codigo_pet",defaultValue="1") Long codigo_pet){
+		return new  ResponseEntity<Collection<Usuario>>(interesseService.buscarPorPet(codigo_pet), HttpStatus.OK);
 	}
 }
