@@ -25,4 +25,9 @@ export class HeaderComponent {
   urlAtiva(url: string): boolean {
       return this.url && this.url.includes(url);
   }
+
+  logout() {
+    sessionStorage.removeItem('colaborador');
+    this._router.navigateByUrl('/');
+  }
 }
