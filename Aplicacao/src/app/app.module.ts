@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { CadastroPetModule } from './cadastro-pet/cadastro-pet.module';
+import { DetalhePetModule } from './detalhe-pet/detalhe-pet.module';
+import { CadastroUsuarioModule } from './cadastro-usuario/cadastro-usuario.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -15,6 +18,7 @@ import { LoginComponent } from './login/login.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { AlertaComponent } from './alerta/alerta.component';
 import { FotoComponent } from './foto/foto.component';
+import { Webservice } from './helpers/webservice';
 
 const appRoutes: Routes = [
   { path: '', component: LandingPageComponent },
@@ -36,21 +40,25 @@ const appRoutes: Routes = [
     HeaderComponent,
     FiltroComponent,
     ListaPetComponent,
-    DetalhePetComponent,
-    CadastroPetComponent,
-    CadastroUsuarioComponent,
     LoginComponent,
     LandingPageComponent,    
-    AlertaComponent, FotoComponent
+    AlertaComponent, 
+    FotoComponent,
+    DetalhePetComponent
   ],
   
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+
+    CadastroPetModule,
+    DetalhePetModule,
+    CadastroUsuarioModule,
+
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [ Webservice ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

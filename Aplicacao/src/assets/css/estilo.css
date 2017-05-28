@@ -160,10 +160,15 @@ button:hover {
   border-bottom: 5px solid #fca72b; }
   .main img {
     width: 100%;
-    height: 250px; }
+    height: 250px;
+    cursor: pointer; }
   .main .nome {
     margin-left: 10px;
     font-weight: bold; }
+    .main .nome span {
+      cursor: pointer; }
+      .main .nome span:hover {
+        color: #ffb64d; }
   .main .caracteristicas {
     margin-left: 10px;
     color: #333333; }
@@ -188,15 +193,16 @@ button:hover {
   padding-bottom: 80px; }
 
 .edit-btn {
+  background: white;
+  border: 1px solid #ffb64d;
+  color: #ffb64d;
+  border-radius: 7px;
   margin-top: 30px;
   width: 100%;
-  border: 0px;
-  height: 45px;
-  background-color: #333333;
-  border-radius: 5px;
-  color: white; }
+  padding: 15px; }
   .edit-btn:hover {
-    background-color: #fca72b; }
+    background: #ffb64d;
+    color: white; }
 
 @media (max-width: 1200px) {
   .main {

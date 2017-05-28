@@ -2,6 +2,7 @@ import { Sexo } from './sexo';
 import { Tipo } from './tipo';
 import { Porte } from './porte';
 import { Idade } from './idade';
+import { Foto } from './foto';
 
 export class Pet {
     id: number;
@@ -12,4 +13,5 @@ export class Pet {
     sexo: Sexo = new Sexo();
     raca: string;
     idade: Idade = new Idade();
+    fotos: Foto[];
 }
