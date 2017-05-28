@@ -9,6 +9,9 @@
 		</p>      
 		<p class="caracteristicas">{{ pet.sexo.sexo }}, porte {{ pet.porte.porte }}...</p>  
 	</div>
-	<button class="edit-btn"  [routerLink]="['/editar-pet/', pet.id]">Editar</button>
-	<!--<button class="edit-btn" *ngIf="usuario.autorizacoes && usuario.autorizacoes[1].autorizacao" [routerLink]="['/editar-pet/1']">Editar</button>-->
+
+	<!--<button class="edit-btn"  [routerLink]="['/editar-pet/', pet.id]">Editar</button>-->
+	<button class="edit-btn" *ngIf="urlAtiva('meus-pets') && usuario.autorizacoes && 
+			(usuario.autorizacoes[0].autorizacao == 'ROLE_CUIDADOR' || 
+			usuario.autorizacoes[0].autorizacao == 'ROLE_ADMIN')" [routerLink]="['/editar-pet/', pet.id]">Editar</button>
 </div>

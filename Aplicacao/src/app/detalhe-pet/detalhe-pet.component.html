@@ -19,7 +19,7 @@
 			<div class="descricao-left">
 
 				<div class="pata-cinza"></div><p class="animal">{{ pet.tipo.tipo }}</p>
-				<div class="gen-ico {{ pet.sexo.sexo == 'M' ? 'macho-cinza':'femea-cinza' }}" ></div><p class="genero">{{ pet.sexo.sexo }}</p>
+				<div class="gen-ico {{ pet.sexo.sexo == 'M' ? 'macho-cinza':'femea-cinza' }}" ></div><p class="genero">{{ pet.sexo.sexo == 'M'? 'Macho':'Fêmea' }}</p>
 				<h2>Descrição:</h2>
 				<p>
 					{{ pet.descricao }}
