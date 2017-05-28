@@ -5,7 +5,7 @@
 				<img *ngIf="pet.fotos" src="data:image/jpeg;base64,{{pet.fotos[0].foto}}"/>
 				<img *ngIf="!pet.fotos" src=""/>
 				
-				<i class="fa fa-heart-o fa-3x"></i>
+				<!--<i class="fa fa-heart-o fa-3x"></i>-->
 				<p>{{ pet.nome }} </p>
 			</div>
 			
@@ -33,10 +33,10 @@
 				<div class="{{ (pet.porte.porte | lowercase) == 'grande' ? 'grande-amarelo':'grande-cinza' }} an3"></div>
 
 				<div class="boneco-cinza an4"></div>
-				<p class="an5">Nome do Cuidador</p>
+				<p class="an5">{{ usuario.nome }}</p>
 
 				<div class="local-cinza an6"></div>
-				<p class="an7">Localização do cuidador</p>
+				<p class="an7">{{ usuario.cidade }}, {{ usuario.estado }}</p>
 				
 				<button type="button" class="btn-quero-adotar">Quero adotar</button>
 			</div>

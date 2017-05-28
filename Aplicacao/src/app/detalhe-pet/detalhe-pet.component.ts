@@ -24,6 +24,10 @@ export class DetalhePetComponent implements OnInit {
                       pet => this.pet = pet,
                       erro => console.log(erro));
           }
+
+          if(sessionStorage.getItem('usuario')) {
+              this.usuario = JSON.parse(sessionStorage.getItem('usuario'));
+          }
       }); 
   }
 

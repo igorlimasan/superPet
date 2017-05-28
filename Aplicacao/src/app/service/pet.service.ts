@@ -20,11 +20,11 @@ export class PetService {
 		
 	}
 
-	listar(usuario: Usuario): Observable<Pet[]>  {
+	listar(usuario: Usuario, url: string): Observable<Pet[]>  {
 		//let colaborador: Colaborador = JSON.parse(sessionStorage.getItem('colaborador'));
 		let path: string ='pet/list/';
 
-		if(usuario.autorizacoes && usuario.autorizacoes[0].autorizacao == "cuidador") return this._webservice.get(path + usuario.id)
+		if(url.includes('meus-pets') && usuario.autorizacoes && usuario.autorizacoes[0].autorizacao == "cuidador") return this._webservice.get(path + usuario.id)
 			.map(res => res.json());
 
 		return this._webservice.get(path)

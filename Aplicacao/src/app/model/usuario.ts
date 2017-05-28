@@ -7,6 +7,9 @@ export class Usuario {
     senha: string;
     email_contato: string;
     numero_contato: string;
+    cep: string;
+    estado: string;
+    cidade: string;
     facebook: string;
     autorizacoes: Autorizacao[];
 }

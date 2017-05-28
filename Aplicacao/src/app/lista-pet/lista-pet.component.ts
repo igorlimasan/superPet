@@ -19,15 +19,17 @@ export class ListaPetComponent {
     this._router.events
         .subscribe((e: NavigationStart) => {
             this.url = e.url;
+
+            this.service.listar(this.usuario, this.url)
+                .subscribe(
+                    pets => {this.pets = pets},
+                    erro => console.log(erro));
     });
   
     if(sessionStorage.getItem('usuario')) {
         this.usuario = JSON.parse(sessionStorage.getItem('usuario'));
     }
-    this.service.listar(this.usuario)
-          .subscribe(
-              pets => {this.pets = pets},
-              erro => console.log(erro));
+    
   }
 
   urlAtiva(url: string): boolean {

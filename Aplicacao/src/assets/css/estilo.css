@@ -552,8 +552,9 @@ h1 {
       color: #de0000;
       cursor: pointer; }
     .detalhe-pet .capa .nome p {
+      font-size: 30px;
       margin-left: 180px;
-      margin-top: -22px; }
+      margin-top: -35px; }
   .detalhe-pet .capa img {
     width: 150px;
     margin-top: 35px;
