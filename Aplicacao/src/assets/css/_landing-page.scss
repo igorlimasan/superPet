@@ -61,6 +61,10 @@ h1{
 .petland{
         margin-top: -570px;
         @media only screen 
+        and (max-width: 1630px){
+           margin-top: -540px;
+        }
+        @media only screen 
         and (max-width: 991px){
            margin-top: -1300px; 
         }
@@ -87,6 +91,10 @@ h1{
         @media only screen 
         and (max-width: 387px){
            margin-top: -1300px; 
+        }            
+        @media only screen 
+        and (min-width: 2288px){
+           margin-top: -624px;
         }
 }
 
@@ -124,7 +132,7 @@ h1{
         @media only screen 
         and (max-width: 991px){
            margin-top: 2em; 
-        }
+        }    
     }
 
     .white-blocks{
