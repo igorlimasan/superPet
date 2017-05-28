@@ -31,15 +31,5 @@ public class UsuarioController {
 	public Usuario save(@RequestBody Usuario usuario, HttpServletRequest request, HttpServletResponse response) {
 		usuario = usuarioService.salvar(usuario);
 		return usuario;
-	}
-	
-	@RequestMapping(value = "/login", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
-	@JsonView(View.All.class)
-	@ResponseStatus(HttpStatus.CREATED)
-	public Usuario logar(@RequestBody Usuario usuario, HttpServletRequest request, HttpServletResponse response) {
-		usuario = usuarioService.salvar(usuario);
-		return usuario;
-	}
-	
-
+	}	
 }
