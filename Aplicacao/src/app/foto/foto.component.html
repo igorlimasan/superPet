@@ -2,7 +2,7 @@
 	<div class="main">
 		<img *ngIf="pet.fotos" src="data:image/jpeg;base64,{{pet.fotos[0].foto}}" [routerLink]="['/detalhe-pet/', pet.id]"/>
 		<img *ngIf="!pet.fotos" src="" [routerLink]="['/detalhe-pet/', pet.id]"/>
-		<p class="nome"><span [routerLink]="['/detalhe-pet/1']">{{ pet.nome }}</span>
+		<p class="nome"><span [routerLink]="['/detalhe-pet/', pet.id]">{{ pet.nome }}</span>
 			<button class="coracao-cinza">
 				<i class="fa fa-heart-o"></i>
 			</button>
