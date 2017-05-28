@@ -1,11 +1,16 @@
 package br.com.superpet.models;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -19,28 +24,41 @@ public class Pet {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
+	@JsonView({View.All.class,View.Alternative.class})
 	private Long id;
 	
 	@Column(name = "nome")
+	@JsonView({View.All.class,View.Alternative.class})
 	private String nome;
 	
-	@JsonView({View.Alternative.class})
+	@JsonView({View.All.class,View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_tipo")
 	private Tipo tipo;
 	
+	@JsonView({View.All.class,View.Alternative.class})
 	@Column(name = "descricao")
 	private String descricao;
 	
-	@JsonView({View.Alternative.class})
+	
+	
+	@JsonView({View.All.class,View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_porte")
 	private Porte porte;
 	
-	@JsonView({View.Alternative.class})
+	@JsonView({View.All.class,View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_sexo")
 	private Sexo sexo;
+	
+	@JsonView({View.All.class,View.Alternative.class})
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "pet_foto", joinColumns = {@JoinColumn(name = "fk_pet")}, 
+	inverseJoinColumns= {@JoinColumn(name = "fk_foto")})
+	private List<Foto> fotos;
+	
+	
 	
 	@Column(name = "raca")
 	private String raca;
@@ -113,6 +131,16 @@ public class Pet {
 	public void setIdade(Idade idade) {
 		this.idade = idade;
 	}
+
+	public List<Foto> getFotos() {
+		return fotos;
+	}
+
+	public void setFotos(List<Foto> fotos) {
+		this.fotos = fotos;
+	}
+	
+	
 	
 	
 	

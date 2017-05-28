@@ -11,8 +11,9 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
         
     <context:component-scan base-package="br.com.superpet"/>
-    <context:component-scan base-package="service"/>
+    <context:component-scan base-package="services"/>
     <jpa:repositories base-package="repositories"/>
+    <jpa:repositories base-package="security"/>
 
     <!-- Datasource -->
     <bean id="dataSource" 
@@ -31,7 +32,7 @@
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="generateDdl" value="false" />
-                <property name="showSql" value="false" />
+                <property name="showSql" value="true" />
                 <property name="databasePlatform" value="org.hibernate.dialect.MySQLDialect"/>
             </bean>
         </property>

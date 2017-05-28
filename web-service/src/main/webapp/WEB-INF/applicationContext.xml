@@ -13,7 +13,7 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
         
     <context:component-scan base-package="br.com.superpet"/>
-    <jpa:repositories base-package="br.com.superpet.repository"/>
+    <jpa:repositories base-package="br.com.superpet.repositories"/>
     <mvc:annotation-driven />
 
     <!-- Datasource -->
@@ -33,7 +33,7 @@
         <property name="jpaVendorAdapter">
             <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
                 <property name="generateDdl" value="false" />
-                <property name="showSql" value="false" />
+                <property name="showSql" value="true" />
                 <property name="databasePlatform" value="org.hibernate.dialect.MySQLDialect"/>
             </bean>
         </property>

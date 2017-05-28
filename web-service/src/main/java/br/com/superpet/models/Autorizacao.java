@@ -7,16 +7,20 @@ import javax.persistence.Table;
 
 import org.springframework.security.core.GrantedAuthority;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonView;
+
+import br.com.superpet.views.View;
 
 @Entity
 @Table(name="autorizacao")
 public class Autorizacao implements GrantedAuthority{
 	@Id
 	@Column(name = "id")
+	@JsonView({View.All.class,View.Alternative.class})
 	private Long id;
 	
-	@Column(name = "autorizacao", nullable = false)
+	@Column(name = "nome")
+	@JsonView({View.All.class,View.Alternative.class})
 	private String autorizacao;
 	
 	public Long getId() {
@@ -28,7 +32,7 @@ public class Autorizacao implements GrantedAuthority{
 	}
 
 
-	@JsonIgnore
+	//@JsonIgnore
 	public String getAuthority() {
 		// TODO Auto-generated method stub
 		return this.autorizacao;

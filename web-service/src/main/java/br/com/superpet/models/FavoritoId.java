@@ -3,7 +3,6 @@ package br.com.superpet.models;
 import java.io.Serializable;
 
 import javax.persistence.Embeddable;
-import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -13,17 +12,18 @@ import com.fasterxml.jackson.annotation.JsonView;
 import br.com.superpet.views.View;
 
 @Embeddable
-@Entity
-@Table(name = "favorito")
-
 
 public class FavoritoId implements Serializable{
+	
+	private static final long serialVersionUID = 1L;
+
 	@JsonView({View.All.class,View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_pet")
+	
 	private Pet pet;
 	
-	@JsonView({View.Alternative.class})
+	@JsonView({View.All.class,View.Alternative.class})
 	@OneToOne
 	@JoinColumn(name = "fk_usuario")
 	private Usuario usuario;

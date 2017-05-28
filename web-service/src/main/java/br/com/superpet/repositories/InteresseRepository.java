@@ -14,10 +14,10 @@ public interface InteresseRepository extends CrudRepository<Interesse, Interesse
 	
 	public List<Interesse> findAll();
 	
-	@Query("select pet from Interesse i where i.interesseId.usuario.id=?1")
+	@Query("select i.interesseId.pet from Interesse i where i.interesseId.usuario.id=?1")
 	public List<Pet> findByUsuario(Long id);
 	
-	@Query ("select usuario from Interesse i where i.interesseId.pet.id=?i")
+	@Query ("select i.interesseId.usuario from Interesse i where i.interesseId.pet.id=?1")
 	public List<Usuario> findByPet(Long id);
 
 }

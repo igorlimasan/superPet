@@ -14,10 +14,6 @@ public class FavoritoImpl implements FavoritoService {
 
 	@Autowired
 	private FavoritoRepository favoritoRep;
-	@Override
-	public Favorito buscar(long id) {
-		return favoritoRep.findByUsuario(id);
-	}
 
 	@Override
 	public List<Favorito> buscarTodos() {
