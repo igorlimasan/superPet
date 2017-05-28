@@ -39,6 +39,7 @@ export class CadastroPetComponent implements OnInit {
             .salvar(this.pet)
             .subscribe(alerta => {
                 this.alerta = alerta;
+                console.log(alerta.mensagem)
             }, erro => console.log(erro));
     }
 
