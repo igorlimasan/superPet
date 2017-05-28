@@ -148,6 +148,22 @@ button:hover{cursor: pointer;}
     margin-right: auto;
     margin-left: auto;
 }
+
+.btn-add {
+  @include linear-gradient(left top, $rosa, $laranja);
+  border-radius: 50%;
+  border: none;
+  bottom: 35px;
+  box-shadow: rgba(240,145,255,0.5) 2px 2px 15px;
+  color: white;
+  display: block;
+  height: 50px;
+  padding: 10px;
+  position: fixed;
+  right: 35px;
+  width: 50px;
+}
+
 @media (min-width: 768px) {
   .container {
     width: 750px;
