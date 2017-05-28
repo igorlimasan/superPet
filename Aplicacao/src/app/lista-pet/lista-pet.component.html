@@ -1,12 +1,7 @@
 <app-filtro></app-filtro>
 
 <div class="list-pet-view">
-  <div class="container">
-        <app-foto></app-foto>
-        <app-foto></app-foto>
-        <app-foto></app-foto>
-        <app-foto></app-foto>
-        <app-foto></app-foto>
-        <app-foto></app-foto>
+  <div class="container" *ngFor="let pet of pets">
+        <app-foto pet="pet"></app-foto>
     </div>
 </div>

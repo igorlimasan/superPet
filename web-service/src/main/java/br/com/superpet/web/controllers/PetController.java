@@ -96,7 +96,7 @@ public class PetController {
 		if(pets == null){
 			return new ResponseEntity<Collection<Pet>>(HttpStatus.NOT_FOUND);
 		}
-		return new  ResponseEntity<Collection<Pet>>(adocaoService.buscarPorCuidador(codigo_usuario), HttpStatus.OK);
+		return new  ResponseEntity<Collection<Pet>>(adocaoService.buscarPorCuidador(codigoUsuario), HttpStatus.OK);
 	}
 	
 	/* @RequestMapping(value = "/list/favoritos")

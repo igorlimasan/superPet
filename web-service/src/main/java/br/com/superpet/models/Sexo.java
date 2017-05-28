@@ -22,7 +22,7 @@ public class Sexo {
 	
 	@Column(name = "sexo")
 	@JsonView({View.All.class,View.Alternative.class})
-	private String sexo;
+	private String nome;
 
 	public Long getId() {
 		return id;
@@ -33,10 +33,10 @@ public class Sexo {
 	}
 
 	public String getSexo() {
-		return sexo;
+		return nome;
 	}
 
 	public void setSexo(String sexo) {
-		this.sexo = sexo;
+		this.nome = nome;
 	}
 }
