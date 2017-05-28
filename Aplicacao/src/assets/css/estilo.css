@@ -21,6 +21,10 @@ input[type="text"], select, textarea {
     width: 100%;
     margin-bottom: 15px;
     margin-top: 5px; }
+  .cadastro input[type="file"] {
+    background: white;
+    border: 1px dashed #ededed;
+    height: 100px; }
   .cadastro input, .cadastro select {
     height: 35px; }
   .cadastro select {
@@ -252,6 +256,56 @@ h1 {
 .n-second {
   margin-top: 55px; }
 
+.detalhe-pet .capa {
+  height: 220px;
+  background: #f9f9f9;
+  position: relative; }
+  .detalhe-pet .capa .container {
+    height: 100%;
+    padding: 0;
+    position: relative;
+    width: 80%; }
+  .detalhe-pet .capa .nome {
+    left: 0;
+    position: absolute;
+    bottom: 25px; }
+.detalhe-pet .infos {
+  position: relative; }
+  .detalhe-pet .infos .container {
+    height: 100%;
+    padding: 50px 0;
+    width: 80%; }
+  .detalhe-pet .infos .descricao-left {
+    width: 60%;
+    margin-right: 10%;
+    float: left; }
+  .detalhe-pet .infos .descricao-right {
+    width: 30%;
+    float: left; }
+  @media (max-width: 767px) {
+    .detalhe-pet .infos .container {
+      padding: 25px; }
+    .detalhe-pet .infos .descricao-left {
+      width: 100%; }
+    .detalhe-pet .infos .descricao-right {
+      width: 100%; } }
+.detalhe-pet .btn-galeria {
+  background: white;
+  border: 1px solid #ffb64d;
+  border-radius: 7px;
+  bottom: 25px;
+  color: #ffb64d;
+  padding: 15px;
+  position: absolute;
+  right: 0; }
+.detalhe-pet .btn-quero-adotar {
+  background: #ffb64d;
+  border: none;
+  border-radius: 7px;
+  color: white;
+  padding: 15px;
+  width: 100%; }
+
 .header-default {
   border-bottom: 1px solid #f9f9f9;
   display: block; }
@@ -261,9 +315,13 @@ h1 {
     float: left;
     margin-right: 25px;
     position: relative; }
-    @media (max-width: 654px) {
+  @media (max-width: 654px) {
+    .header-default {
+      height: auto;
+      margin-bottom: 0; }
       .header-default .logo {
-        margin-bottom: 20px; } }
+        float: none;
+        margin-bottom: 18px; } }
   @media (max-width: 654px) {
     .header-default .last {
       border-bottom: 1px solid #fafafa; } }
@@ -275,22 +333,21 @@ h1 {
     padding: 5px;
     margin-top: 45px;
     margin-right: 15px; }
-    @media (max-width: 654px) {
-      .header-default a {
-        width: 100%;
-        text-align: center;
-        margin-right: 0px;
-        margin-left: 0px;
-        margin-top: 0px;
-        padding: 0px;
-        height: 35px;
-        padding-top: 18px;
-        background-color: white;
-        border-top: 1px solid #f9f9f9; } }
     .header-default a.left {
       float: left; }
     .header-default a.right {
       float: right; }
+    @media (max-width: 654px) {
+      .header-default a {
+        background-color: white;
+        border-top: 1px solid #f9f9f9;
+        display: block;
+        margin: 0;
+        padding: 15px 0;
+        text-align: center;
+        width: 100%; }
+        .header-default a.left, .header-default a.right {
+          float: none; } }
 
 .filter {
   border-bottom: 1px solid #ededed;
