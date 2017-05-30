@@ -28,8 +28,5 @@
     </sec:authentication-provider>
   </sec:authentication-manager>
   
-  
-  
-  
 
 </beans:beans>
